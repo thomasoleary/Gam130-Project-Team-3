@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class CameraRaycasting : MonoBehaviour
 {
-
+  
     public float range;
-    // Start is called before the first frame update
-    void Start()
-    {
+    Interactable interactableScript;
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
 
         if (Input.GetKeyDown(KeyCode.E))
-        {
+        {        
             HandleRaycast();
         }
 
@@ -26,11 +21,20 @@ public class CameraRaycasting : MonoBehaviour
     private void HandleRaycast()
     {
         RaycastHit hit;
-
-
+       
         if (Physics.Raycast(transform.position, transform.forward, out hit, range))
         {
-            print(hit);
+            interactableScript = hit.transform.gameObject.GetComponent<Interactable>();
+
+            if (interactableScript != null)
+            {
+                if(hit.transform.gameObject.CompareTag("Door"))
+                {
+                    interactableScript.PlayerUnlock();
+                }
+             
+            }
+       
         }
     }
 
