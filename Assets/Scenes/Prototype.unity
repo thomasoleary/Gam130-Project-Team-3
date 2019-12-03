@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 50821767}
   - component: {fileID: 50821766}
   - component: {fileID: 50821765}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 137944633}
   - component: {fileID: 137944632}
   m_Layer: 0
-  m_Name: Floor (4)
+  m_Name: Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,15 +307,15 @@ GameObject:
   - component: {fileID: 273353819}
   - component: {fileID: 273353818}
   - component: {fileID: 273353817}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &273353817
-CapsuleCollider:
+--- !u!64 &273353817
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -324,10 +324,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &273353818
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -418,9 +418,7 @@ Transform:
   - {fileID: 1078654028}
   - {fileID: 1984819778}
   - {fileID: 1897991589}
-  - {fileID: 1155846577}
   - {fileID: 1187782488269935217}
-  - {fileID: 458713534}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -436,7 +434,7 @@ GameObject:
   - component: {fileID: 458713533}
   - component: {fileID: 458713532}
   - component: {fileID: 458713531}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,13 +507,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458713530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.4527445, y: 0, z: 1.09}
-  m_LocalScale: {x: 3.9758558, y: 0.048996, z: 18.318138}
+  m_LocalPosition: {x: 0.4286915, y: 0, z: -0.15721159}
+  m_LocalScale: {x: 0.14882158, y: 13.170454, z: 0.68567234}
   m_Children:
   - {fileID: 742660408}
   - {fileID: 514073616}
-  m_Father: {fileID: 411475692}
-  m_RootOrder: 6
+  m_Father: {fileID: 1984819778}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &514073612
 GameObject:
@@ -529,7 +527,7 @@ GameObject:
   - component: {fileID: 514073615}
   - component: {fileID: 514073614}
   - component: {fileID: 514073613}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Water (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -620,7 +618,7 @@ GameObject:
   - component: {fileID: 629174527}
   - component: {fileID: 629174526}
   - component: {fileID: 629174525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -811,7 +809,7 @@ GameObject:
   - component: {fileID: 742660407}
   - component: {fileID: 742660406}
   - component: {fileID: 742660405}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Water (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -890,6 +888,26 @@ Transform:
   m_Father: {fileID: 458713534}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &797741564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4938289259371569549, guid: 208e635b136284242954fddd352a138d,
+    type: 3}
+  m_PrefabInstance: {fileID: 977872591304294973}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &797741568
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797741564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 43660989973504892, guid: 208e635b136284242954fddd352a138d, type: 3}
 --- !u!1001 &877207369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -976,6 +994,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: First Person Player
       objectReference: {fileID: 0}
+    - target: {fileID: 702149493330413490, guid: 0bd1ba71ef06c5049bb732bd8f7449e3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 702149493330413494, guid: 0bd1ba71ef06c5049bb732bd8f7449e3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1031,6 +1054,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1663004345665433805, guid: 0bd1ba71ef06c5049bb732bd8f7449e3,
+        type: 3}
+      propertyPath: groundMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 702149491972949294, guid: 0bd1ba71ef06c5049bb732bd8f7449e3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bd1ba71ef06c5049bb732bd8f7449e3, type: 3}
 --- !u!1 &902787190
@@ -1046,7 +1079,7 @@ GameObject:
   - component: {fileID: 902787192}
   - component: {fileID: 902787191}
   m_Layer: 0
-  m_Name: Floor (5)
+  m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1262,7 +1295,7 @@ GameObject:
   - component: {fileID: 1155846576}
   - component: {fileID: 1155846575}
   - component: {fileID: 1155846574}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1336,12 +1369,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155846573}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03, y: -0.17, z: 10.74}
-  m_LocalScale: {x: 3.061321, y: 0.29449907, z: 1.2888162}
+  m_LocalPosition: {x: 0.00112294, y: -45.69714, z: 0.20400076}
+  m_LocalScale: {x: 0.114589326, y: 79.16332, z: 0.04824211}
   m_Children:
   - {fileID: 629174528}
   - {fileID: 50821768}
-  m_Father: {fileID: 411475692}
+  m_Father: {fileID: 1984819778}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1201619660
@@ -1356,7 +1389,7 @@ GameObject:
   - component: {fileID: 1201619663}
   - component: {fileID: 1201619662}
   - component: {fileID: 1201619661}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1567,7 +1600,7 @@ GameObject:
   - component: {fileID: 1497653685}
   - component: {fileID: 1497653684}
   - component: {fileID: 1497653683}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bridge (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1670,7 +1703,7 @@ GameObject:
   - component: {fileID: 1600564906}
   - component: {fileID: 1600564905}
   - component: {fileID: 1600564904}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1780,7 +1813,7 @@ GameObject:
   - component: {fileID: 1897991588}
   - component: {fileID: 1897991587}
   - component: {fileID: 1897991586}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1872,7 +1905,7 @@ GameObject:
   - component: {fileID: 1984819777}
   - component: {fileID: 1984819776}
   - component: {fileID: 1984819775}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1951,6 +1984,8 @@ Transform:
   - {fileID: 273353820}
   - {fileID: 1201619664}
   - {fileID: 1600564907}
+  - {fileID: 458713534}
+  - {fileID: 1155846577}
   m_Father: {fileID: 411475692}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
