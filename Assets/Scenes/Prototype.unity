@@ -1584,6 +1584,7 @@ MonoBehaviour:
   - {fileID: 4408996208908207829}
   - {fileID: 1512129166}
   amountOfOpenedDoors: 0
+  canExit: 0
 --- !u!4 &1340250282
 Transform:
   m_ObjectHideFlags: 0
@@ -2204,21 +2205,6 @@ PrefabInstance:
     - target: {fileID: 7150242924332135647, guid: dfd523b70d778044cae4f921da003353,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7150242924332135647, guid: dfd523b70d778044cae4f921da003353,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.47765023
-      objectReference: {fileID: 0}
-    - target: {fileID: 7150242924332135647, guid: dfd523b70d778044cae4f921da003353,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3.698102
-      objectReference: {fileID: 0}
-    - target: {fileID: 6317838570015021677, guid: dfd523b70d778044cae4f921da003353,
-        type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
