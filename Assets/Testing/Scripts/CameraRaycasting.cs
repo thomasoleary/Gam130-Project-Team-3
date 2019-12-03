@@ -32,7 +32,10 @@ public class CameraRaycasting : MonoBehaviour
                 {
                     interactableScript.PlayerUnlock();
                 }
-             
+                else if (hit.transform.gameObject.CompareTag("ExitDoor"))
+                {
+                    interactableScript.OpenExit();
+                }
             }
        
         }

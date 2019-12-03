@@ -11,11 +11,13 @@ public class LevelManager : MonoBehaviour
     public bool door2Unlocked = false;
     public GameObject[] doors;
     public int amountOfOpenedDoors = 0;
+    public bool canExit = false;
 
     void UnlockExit()
     {
         mainDoorlight1.color = Color.green;
         mainDoorlight2.color = Color.green;
+        canExit = true;
     }
 
     public void HasAllDoorsBeenUnlocked()

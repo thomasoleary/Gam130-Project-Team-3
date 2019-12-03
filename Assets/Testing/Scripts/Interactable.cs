@@ -20,10 +20,27 @@ public class Interactable : MonoBehaviour
 
     public void PlayerUnlock()
     {
-        leverAnim.SetTrigger("Open");
-        isUnlocked = true;
-        managerScript.HasAllDoorsBeenUnlocked();
-        doorLight.color = Color.green;
+        if(!isUnlocked)
+        {
+            leverAnim.SetTrigger("Open");
+            isUnlocked = true;
+            managerScript.HasAllDoorsBeenUnlocked();
+            doorLight.color = Color.green;
+        }
+     
+    }
+
+    public void OpenExit()
+    {
+        if(managerScript.canExit)
+        {
+            leverAnim.SetTrigger("Open");
+            // can add more stuff later for the next level
+        }
+        else
+        {
+            return;
+        }
     }
 
 
