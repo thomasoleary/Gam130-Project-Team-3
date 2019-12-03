@@ -1,6 +1,6 @@
 /target:library
 /nowarn:0169
-/out:Temp/Assembly-CSharp.dll
+/out:Temp/Unity.PackageManagerUI.Editor.dll
 /debug:portable
 /optimize-
 /nostdlib+
@@ -36,6 +36,7 @@
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ProfilerModule.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll"
+/reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SpatialTrackingModule.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.StreamingModule.dll"
@@ -68,14 +69,19 @@
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.XRModule.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEditor.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/Unity.Locator.dll"
-/reference:Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
-/reference:Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll
-/reference:Library/ScriptAssemblies/Unity.TextMeshPro.dll
 /reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
+/reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll"
 /reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll"
+/reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll"
 /reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
+/reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll"
+/reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll"
 /reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll"
+/reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll"
 /reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll"
+/reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll"
+/reference:"C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll"
+/reference:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\System.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\System.Core.dll"
@@ -295,8 +301,55 @@
 /define:ENABLE_VSTU
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
-Assets\Testing\Scripts\CameraRaycasting.cs
-Assets\Testing\Scripts\Interactable.cs
-Assets\Testing\Scripts\LevelManager.cs
-Assets\Testing\Scripts\MouseLook.cs
-Assets\Testing\Scripts\PlayerMovement.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\AssemblyInfo.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\External\SemVersion.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\External\SemVersionExtension.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Common\ApplicationUtil.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Common\OperationSignal.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Common\Resources.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Common\ThreadedDelay.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Interfaces\IAddOperation.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Interfaces\IBaseOperation.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Interfaces\IListOperation.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Interfaces\IOperationFactory.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Interfaces\IRemoveOperation.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Interfaces\ISearchOperation.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\OperationFactory.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\Package.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageAssetPostprocessor.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageCollection.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageError.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageFilter.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageGroupOrigins.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageInfo.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageInfoListExtensions.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageJsonHelper.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageListExtensions.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageOrigin.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageSearchFilter.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageState.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageTag.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Upm\UpmAddOperation.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Upm\UpmBaseOperation.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Upm\UpmListOperation.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Upm\UpmOperationFactory.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Upm\UpmRemoveOperation.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Upm\UpmSearchOperation.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\Common\Alert.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\Common\LoadingSpinner.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\Common\PopupField.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\Common\UIUtils.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\Common\VersionItem.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\Interfaces\IPackageManagerExtension.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageAddFromUrlField.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageDetails.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageFiltering.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageGroup.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageItem.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageList.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageManagerExtensions.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageManagerPrefs.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageManagerToolbar.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageManagerWindow.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageSearchToolbar.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageStatusBar.cs

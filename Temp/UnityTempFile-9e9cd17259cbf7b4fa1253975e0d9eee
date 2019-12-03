@@ -1,6 +1,6 @@
 /target:library
 /nowarn:0169
-/out:Temp/Unity.PackageManagerUI.Editor.dll
+/out:Temp/Unity.TextMeshPro.dll
 /debug:portable
 /optimize-
 /nostdlib+
@@ -36,7 +36,6 @@
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ProfilerModule.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll"
-/reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SpatialTrackingModule.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.StreamingModule.dll"
@@ -71,9 +70,6 @@
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/Unity.Locator.dll"
 /reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
 /reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll"
-/reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll"
-/reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll"
-/reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll"
 /reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll"
 /reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll"
 /reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
@@ -304,55 +300,59 @@
 /define:ENABLE_VSTU
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\AssemblyInfo.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\External\SemVersion.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\External\SemVersionExtension.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Common\ApplicationUtil.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Common\OperationSignal.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Common\Resources.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Common\ThreadedDelay.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Interfaces\IAddOperation.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Interfaces\IBaseOperation.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Interfaces\IListOperation.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Interfaces\IOperationFactory.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Interfaces\IRemoveOperation.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Interfaces\ISearchOperation.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\OperationFactory.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\Package.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageAssetPostprocessor.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageCollection.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageError.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageFilter.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageGroupOrigins.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageInfo.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageInfoListExtensions.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageJsonHelper.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageListExtensions.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageOrigin.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageSearchFilter.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageState.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Packages\PackageTag.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Upm\UpmAddOperation.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Upm\UpmBaseOperation.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Upm\UpmListOperation.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Upm\UpmOperationFactory.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Upm\UpmRemoveOperation.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\Services\Upm\UpmSearchOperation.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\Common\Alert.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\Common\LoadingSpinner.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\Common\PopupField.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\Common\UIUtils.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\Common\VersionItem.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\Interfaces\IPackageManagerExtension.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageAddFromUrlField.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageDetails.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageFiltering.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageGroup.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageItem.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageList.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageManagerExtensions.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageManagerPrefs.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageManagerToolbar.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageManagerWindow.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageSearchToolbar.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.package-manager-ui@2.0.7\Editor\Sources\UI\PackageStatusBar.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\AssemblyInfo.cs.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\FastAction.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\MaterialReferenceManager.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TextContainer.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TextMeshPro.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TextMeshProUGUI.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_Asset.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_Character.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_CharacterInfo.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_ColorGradient.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_CoroutineTween.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_DefaultControls.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_Dropdown.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_EditorResourceManager.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_FontAsset.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_FontAssetCommon.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_FontAssetUtilities.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_FontFeaturesCommon.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_FontFeatureTable.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_InputField.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_InputValidator.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_LineInfo.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_ListPool.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_MaterialManager.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_MeshInfo.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_ObjectPool.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_PackageResourceImporter.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_RichTextTagsCommon.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_RichTextTagStack.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_ScrollbarEventHandler.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_SelectionCaret.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_Settings.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_ShaderUtilities.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_Sprite.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_SpriteAnimator.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_SpriteAsset.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_SpriteAssetImportFormats.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_SpriteCharacter.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_SpriteGlyph.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_Style.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_StyleSheet.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_SubMesh.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_SubMeshUI.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_Text.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_TextElement.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_TextElement_Legacy.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_TextInfo.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_TextParsingUtilities.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_TextUtilities.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_UpdateManager.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMP_UpdateRegistery.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMPro_EventManager.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMPro_ExtensionMethods.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMPro_MeshUtilities.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMPro_Private.cs
+D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Runtime\TMPro_UGUI_Private.cs

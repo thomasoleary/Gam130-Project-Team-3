@@ -1,11 +1,13 @@
 /target:library
 /nowarn:0169
-/out:Temp/Unity.TextMeshPro.Editor.dll
+/out:Temp/Assembly-CSharp.dll
 /debug:portable
 /optimize-
 /nostdlib+
 /preferreduilang:en-US
 /langversion:latest
+/reference:Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll
 /reference:Library/ScriptAssemblies/Unity.TextMeshPro.dll
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.AIModule.dll"
@@ -37,7 +39,6 @@
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ProfilerModule.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll"
-/reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SpatialTrackingModule.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.StreamingModule.dll"
@@ -71,21 +72,10 @@
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/UnityEditor.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\Managed/Unity.Locator.dll"
 /reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
-/reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll"
-/reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll"
-/reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll"
-/reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll"
 /reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll"
-/reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll"
 /reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
-/reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll"
-/reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll"
 /reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll"
-/reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll"
 /reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll"
-/reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll"
-/reference:"C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll"
-/reference:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\System.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\System.Core.dll"
@@ -305,50 +295,8 @@
 /define:ENABLE_VSTU
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\DropdownOptionListDrawer.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\GlyphInfoDrawer.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\GlyphMetricsPropertyDrawer.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\GlyphRectPropertyDrawer.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_BaseEditorPanel.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_BaseShaderGUI.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_BitmapShaderGUI.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_CharacterPropertyDrawer.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_ColorGradientAssetMenu.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_ColorGradientEditor.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_DropdownEditor.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_EditorCoroutine.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_EditorPanel.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_EditorUtility.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_FontAsset_CreationMenu.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_FontAssetEditor.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_GlyphPropertyDrawer.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_InputFieldEditor.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_MeshRendererEditor.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_PackageUtilities.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_PostBuildProcessHandler.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_ProjectTextSettings.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_ResourcesLoader.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_SDFShaderGUI.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_SerializedPropertyHolder.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_SettingsEditor.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_SpriteAssetEditor.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_SpriteAssetImporter.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_SpriteAssetMenu.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_SpriteCharacterPropertyDrawer.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_SpriteGlyphPropertyDrawer.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_StyleAssetMenu.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_StyleSheetEditor.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_SubMesh_Editor.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_SubMeshUI_Editor.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_TextAlignmentDrawer.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_UiEditorPanel.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMP_UIStyleManager.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMPro_ContextMenus.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMPro_CreateObjectMenu.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMPro_EditorShaderUtilities.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMPro_FontAssetCreatorWindow.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMPro_FontPlugin.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMPro_SortingLayerHelper.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMPro_TextContainerEditor.cs
-D:\Github\Gam130-Project-Team-3\Library\PackageCache\com.unity.textmeshpro@1.4.1\Scripts\Editor\TMPro_TexturePostProcessor.cs
+Assets\Testing\Scripts\CameraRaycasting.cs
+Assets\Testing\Scripts\Interactable.cs
+Assets\Testing\Scripts\LevelManager.cs
+Assets\Testing\Scripts\MouseLook.cs
+Assets\Testing\Scripts\PlayerMovement.cs
