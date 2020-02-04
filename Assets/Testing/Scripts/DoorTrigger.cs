@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class DoorTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
+    public GameObject door;
 
-    // Update is called once per frame
-    void Update()
+    bool isOpen = false;
+
+    void onTriggerEnter(Collider col)
     {
+        if(col.tag == "Player")
+        {
+            if (!isOpen)
+                {
+                    isOpen = true;
+                    door.transform.position += new Vector3(0, 4, 0);
+                }
+        }
         
     }
 }
