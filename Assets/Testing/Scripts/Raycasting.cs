@@ -18,7 +18,7 @@ public class Raycasting : MonoBehaviour
     void Pickup()
     {
         
-        if(Physics.Raycast(transform.position, transform.forward, out hit, 100))
+        if(Physics.Raycast(transform.position, transform.forward, out hit, 2))
         {
             if(hit.collider.gameObject.tag == "pickObject")
             {
