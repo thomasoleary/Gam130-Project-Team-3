@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class FanSpin : MonoBehaviour
 {
-    private int spinSpeed;
+
     [SerializeField]
+    int spinSpeed = 20;
 
     // Update is called once per frame
     void Update()
