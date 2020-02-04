@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class Raycasting : MonoBehaviour
 {
-    
-    public GameObject pickedUpObject;
-
-    void Start()
-    {
-    }
+    RaycastHit hit;
+    GameObject pickedUpObject;
 
     void Update()
     {
@@ -21,7 +17,7 @@ public class Raycasting : MonoBehaviour
 
     void Pickup()
     {
-        RaycastHit hit;
+        
         if(Physics.Raycast(transform.position, transform.forward, out hit, 100))
         {
             if(hit.collider.gameObject.tag == "pickObject")
@@ -29,12 +25,13 @@ public class Raycasting : MonoBehaviour
                 pickedUpObject = hit.collider.gameObject;
                 hit.collider.gameObject.transform.parent = transform;
                 hit.collider.gameObject.transform.position = (transform.position + transform.forward);
+
                 hit.rigidbody.useGravity = false;
+                hit.rigidbody.constraints = RigidbodyConstraints.FreezeAll;
             }
         }
         else
         {
-            //pickedUpObject.transform.parent = null;
             pickedUpObject = null;
         }
     }
