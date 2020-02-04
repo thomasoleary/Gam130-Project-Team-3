@@ -20,7 +20,7 @@ public class CollisionBasedFOV : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((fovIncrease == true) && (fieldOfView < 150.0f))
+        if ((fovIncrease == true) && (fieldOfView < 165.0f))
         {
             Camera.current.fieldOfView = (fieldOfView += (Time.deltaTime * 20));
         }
