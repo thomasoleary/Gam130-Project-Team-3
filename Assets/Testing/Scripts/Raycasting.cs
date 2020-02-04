@@ -5,7 +5,7 @@ using UnityEngine;
 public class Raycasting : MonoBehaviour
 {
     RaycastHit hit;
-    public GameObject pickedUpObject;
+    GameObject pickedUpObject;
 
     public GameObject dropPoint;
     private bool hasItem;
