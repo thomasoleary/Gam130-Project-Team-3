@@ -50,8 +50,10 @@ public class Raycasting : MonoBehaviour
 
     void DropPickup()
     {
-        Instantiate(pickedUpObject, dropPoint.transform.position, Quaternion.identity);
+        pickedUpObject.transform.parent = null;
+        pickedUpObject.transform.position = dropPoint.transform.position;
         pickedUpObject.GetComponent<Rigidbody>().useGravity = true;
         pickedUpObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        hasItem = false;
     }
 }
