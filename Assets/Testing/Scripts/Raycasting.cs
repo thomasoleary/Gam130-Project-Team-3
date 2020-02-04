@@ -5,13 +5,24 @@ using UnityEngine;
 public class Raycasting : MonoBehaviour
 {
     RaycastHit hit;
-    GameObject pickedUpObject;
+    public GameObject pickedUpObject;
+
+    public GameObject dropPoint;
+    private bool hasItem;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Pickup();
+            if(hasItem)
+            {
+                DropPickup();
+            }
+            else
+            {
+                Pickup();
+            }
+     
         }
     }
 
@@ -28,11 +39,19 @@ public class Raycasting : MonoBehaviour
 
                 hit.rigidbody.useGravity = false;
                 hit.rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+                hasItem = true;
             }
         }
         else
         {
             pickedUpObject = null;
         }
+    }
+
+    void DropPickup()
+    {
+        Instantiate(pickedUpObject, dropPoint.transform.position, Quaternion.identity);
+        pickedUpObject.GetComponent<Rigidbody>().useGravity = true;
+        pickedUpObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
     }
 }
