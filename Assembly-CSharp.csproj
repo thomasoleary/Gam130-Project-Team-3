@@ -63,12 +63,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Testing\Scripts\CameraRaycasting.cs" />
-    <Compile Include="Assets\Testing\Scripts\Interactable.cs" />
-    <Compile Include="Assets\Testing\Scripts\LevelManager.cs" />
-    <Compile Include="Assets\Testing\Scripts\MouseLook.cs" />
-    <Compile Include="Assets\Testing\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Testing\Scripts\Raycasting.cs" />
+    <Compile Include="Assets\GameManager.cs" />
+    <Compile Include="Assets\Item.cs" />
+    <Compile Include="Assets\Scripts\CameraRaycasting.cs" />
+    <Compile Include="Assets\Scripts\CollisionBasedFOV.cs" />
+    <Compile Include="Assets\Scripts\DoorTrigger.cs" />
+    <Compile Include="Assets\Scripts\FanSpin.cs" />
+    <Compile Include="Assets\Scripts\Interactable.cs" />
+    <Compile Include="Assets\Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Raycasting.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Tom PC/Desktop/Gam130-Project-Team-3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
