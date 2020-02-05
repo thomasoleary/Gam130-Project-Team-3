@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class DoorTrigger : MonoBehaviour
 {
-   
-    public GameObject door;
+    [SerializeField]    
+    GameObject door;
 
     bool isOpen = false;
 
-    void onTriggerEnter(Collider col)
+    private void OnTriggerEnter(Collider other)
     {
-        if(col.tag == "Player")
+        if(other.tag == "Player")
         {
-
-            Debug.Log("Player is standing on plate");
-            //if (!isOpen)
-            //    {
-            //        isOpen = true;
-            //        door.transform.position += new Vector3(0, 4, 0);
-            //    }
+            Debug.Log("Player collided with trigger");
+            if (!isOpen)
+            {
+                door.transform.position += new Vector3(0, 4, 0);
+            }
         }
-        
     }
 }
