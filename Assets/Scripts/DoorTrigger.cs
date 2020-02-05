@@ -13,11 +13,13 @@ public class DoorTrigger : MonoBehaviour
     {
         if(col.tag == "Player")
         {
-            if (!isOpen)
-                {
-                    isOpen = true;
-                    door.transform.position += new Vector3(0, 4, 0);
-                }
+
+            Debug.Log("Player is standing on plate");
+            //if (!isOpen)
+            //    {
+            //        isOpen = true;
+            //        door.transform.position += new Vector3(0, 4, 0);
+            //    }
         }
         
     }
