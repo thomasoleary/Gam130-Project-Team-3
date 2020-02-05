@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class DoorTrigger : MonoBehaviour
 {
-    [SerializeField]    
-    GameObject door;
+    [SerializeField]
+    GameObject movingObject;
 
-    bool isOpen = false;
+    Animator objectAnimation;
+
+    private void Start()
+    {
+        objectAnimation = movingObject.GetComponent<Animator>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
-        {
-            Debug.Log("Player collided with trigger");
-            if (!isOpen)
-            {
-                door.transform.position += new Vector3(0, 4, 0);
-            }
-        }
+        Debug.Log("Player collided with trigger");
+
+        objectAnimation.SetBool("OpenDoor", true);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Player has left the trigger");
+
+        objectAnimation.SetBool("OpenDoor", false);
     }
 }
