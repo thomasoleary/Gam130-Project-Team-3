@@ -12,10 +12,16 @@ public class CameraDetection : MonoBehaviour
 
     public GameObject light1, light2;
 
+    void Start()
+    {
+        playerObject = GameObject.FindGameObjectWithTag("Player").gameObject;
+    }
+
     void Update()
     {
         if(InsideViewrange)
         {
+            Debug.Log("inside view range");
             HandleRaycast();
         }
 
@@ -45,15 +51,15 @@ public class CameraDetection : MonoBehaviour
 
     private void HandleRaycast()
     {
-        playerObject = GameObject.FindGameObjectWithTag("Player").gameObject;
+     
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, (playerObject.transform.position - transform.position), out hit, cameraViewRange))
+        if (Physics.Raycast(transform.position, (playerObject.transform.position - transform.position), out hit))
         {
-            PlayerMovement player = hit.transform.gameObject.GetComponent<PlayerMovement>();
 
-            if (playerObject != null)
+            if (hit.collider.tag == "Player")
             {
+                
                 Debug.DrawRay(transform.position, (playerObject.transform.position - transform.position), Color.red);
                 IsBeingDetected = true;
                 this.gameObject.GetComponent<Animator>().SetBool("SeePlayer", true);
@@ -61,7 +67,9 @@ public class CameraDetection : MonoBehaviour
             }
             else
             {
+                Debug.Log("not being detected");
                 IsBeingDetected = false;
+                StopCoroutine(CheckDetection());
             }
 
         }
@@ -69,7 +77,7 @@ public class CameraDetection : MonoBehaviour
 
     void DetectedPlayer()
     {
-        if (InsideViewrange)
+        if (IsBeingDetected)
         {
             Debug.Log("Game Over");
             // can add the ending bit here
