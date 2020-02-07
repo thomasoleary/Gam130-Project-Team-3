@@ -37,9 +37,6 @@ public class CameraDetection : MonoBehaviour
         if (player != null)
         {
             InsideViewrange = false;
-            this.gameObject.GetComponent<Animator>().SetBool("SeePlayer", false);
-            light1.SetActive(true);
-            light2.SetActive(false);
         }
     }
 
@@ -59,9 +56,8 @@ public class CameraDetection : MonoBehaviour
             {
                 Debug.DrawRay(transform.position, (playerObject.transform.position - transform.position), Color.red);
                 IsBeingDetected = true;
-                light1.SetActive(false);
-                light2.SetActive(true);
                 this.gameObject.GetComponent<Animator>().SetBool("SeePlayer", true);
+                StartCoroutine(CheckDetection());
             }
             else
             {
@@ -71,5 +67,29 @@ public class CameraDetection : MonoBehaviour
         }
     }
 
+    void DetectedPlayer()
+    {
+        if (InsideViewrange)
+        {
+            Debug.Log("Game Over");
+            // can add the ending bit here
+        }
+        else
+        {
+            this.gameObject.GetComponent<Animator>().SetBool("SeePlayer", false);
+            light1.SetActive(true);
+            light2.SetActive(false);
+            return;
+        }
+  
+    }
+
+    IEnumerator CheckDetection()
+    {
+        light1.SetActive(false);
+        light2.SetActive(true);
+        yield return new WaitForSeconds(3);
+        DetectedPlayer();
+    }
 
 }
