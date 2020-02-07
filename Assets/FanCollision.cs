@@ -11,18 +11,22 @@ public class FanCollision : MonoBehaviour
         target = null;
     }
 
-    void OnTriggerStay(Collider col)
+    public void OnTriggerEnter(Collider col)
     {
+        if(col.gameObject.tag == "Player")
+        {
+            Debug.Log("Player standing on fan");
+        }
         target = col.gameObject;
         offset = target.transform.position - transform.position;
     }
 
-    void OnTriggerExit(Collider col)
+    public void OnTriggerExit(Collider col)
     {
         target = null;
     }
 
-    void LateUpdate()
+    public void LateUpdate()
     {
         if (target != null)
         {
