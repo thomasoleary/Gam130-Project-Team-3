@@ -6,27 +6,19 @@ public class CameraDetection : MonoBehaviour
 {
     bool InsideViewrange = false;
     bool IsBeingDetected = false;
+
     public GameObject playerObject;
     public float cameraViewRange;
-   
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    public GameObject light1, light2;
+
     void Update()
     {
         if(InsideViewrange)
         {
             HandleRaycast();
-            Debug.Log("In view range");
         }
-        else
-        {
-            Debug.Log("Not In view range");
-        }
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -65,15 +57,39 @@ public class CameraDetection : MonoBehaviour
                 Debug.DrawRay(transform.position, (playerObject.transform.position - transform.position), Color.red);
                 IsBeingDetected = true;
                 this.gameObject.GetComponent<Animator>().SetBool("SeePlayer", true);
+                StartCoroutine(CheckDetection());
             }
             else
             {
-                this.gameObject.GetComponent<Animator>().SetBool("SeePlayer", false);
                 IsBeingDetected = false;
             }
 
         }
     }
 
+    void DetectedPlayer()
+    {
+        if (InsideViewrange)
+        {
+            Debug.Log("Game Over");
+            // can add the ending bit here
+        }
+        else
+        {
+            this.gameObject.GetComponent<Animator>().SetBool("SeePlayer", false);
+            light1.SetActive(true);
+            light2.SetActive(false);
+            return;
+        }
+  
+    }
+
+    IEnumerator CheckDetection()
+    {
+        light1.SetActive(false);
+        light2.SetActive(true);
+        yield return new WaitForSeconds(3);
+        DetectedPlayer();
+    }
 
 }
