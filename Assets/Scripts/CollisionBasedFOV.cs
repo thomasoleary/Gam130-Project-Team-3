@@ -6,7 +6,7 @@ public class CollisionBasedFOV : MonoBehaviour
 {
 
 
-    private BoxCollider triggerPoint;
+
     private bool fovIncrease = false;
 
     float fieldOfView;
