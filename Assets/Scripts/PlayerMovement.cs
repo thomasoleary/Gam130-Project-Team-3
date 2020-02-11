@@ -26,9 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private float originalSpeed;
     [SerializeField]
     private float smoothTime;
-    [SerializeField]
-    private float currentVelocity;
-
+ 
     Vector3 velocity;
     bool isGrounded;
 
