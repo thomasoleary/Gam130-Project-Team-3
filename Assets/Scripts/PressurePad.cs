@@ -23,17 +23,19 @@ public class PressurePad : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        colourIndicator.color = Color.Lerp(redColour, greenColour, duration);
         Debug.Log("Player collided with trigger");
 
         objectAnimation.SetBool("OpenDoor", true);
-        colourIndicator.color = Color.Lerp(redColour, greenColour, duration);
+        
     }
 
     private void OnTriggerExit(Collider other)
     {
+        colourIndicator.color = Color.Lerp(greenColour, redColour, duration);
         Debug.Log("Player has left the trigger");
 
         objectAnimation.SetBool("OpenDoor", false);
-        colourIndicator.color = Color.Lerp(greenColour, redColour, duration);
+        
     }
 }
