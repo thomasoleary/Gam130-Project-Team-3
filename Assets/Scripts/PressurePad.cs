@@ -7,6 +7,9 @@ public class PressurePad : MonoBehaviour
     [SerializeField]
     GameObject movingObject;
 
+    [SerializeField]
+    Light colourIndicator;
+
     Animator objectAnimation;
 
     private void Start()
