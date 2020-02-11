@@ -12,6 +12,10 @@ public class PressurePad : MonoBehaviour
 
     Animator objectAnimation;
 
+    private Color redColour = Color.red;
+    private Color greenColour = Color.green;
+    float duration = 1f;
+
     private void Start()
     {
         objectAnimation = movingObject.GetComponent<Animator>();
@@ -22,6 +26,7 @@ public class PressurePad : MonoBehaviour
         Debug.Log("Player collided with trigger");
 
         objectAnimation.SetBool("OpenDoor", true);
+        colourIndicator.color = Color.Lerp(redColour, greenColour, duration);
     }
 
     private void OnTriggerExit(Collider other)
@@ -29,5 +34,6 @@ public class PressurePad : MonoBehaviour
         Debug.Log("Player has left the trigger");
 
         objectAnimation.SetBool("OpenDoor", false);
+        colourIndicator.color = Color.Lerp(greenColour, redColour, duration);
     }
 }
