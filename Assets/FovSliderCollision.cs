@@ -11,6 +11,8 @@ public class FovSliderCollision : MonoBehaviour
     private Camera cam;
 
     static float t = 0f;
+    public float fovSpeedModifier = 1f;
+    public float maxFov = 145f;
     public void Start()
     {
         fieldOfView = 70.0f;
@@ -21,16 +23,16 @@ public class FovSliderCollision : MonoBehaviour
     {
         
 
-        if ((fieldOfView < 125.0f) && (collisionEnter == true))
+        if ((fieldOfView < maxFov) && (collisionEnter == true))
         {
             //cam.fieldOfView += Time.deltaTime * 20;
-            t += 0.5f * Time.deltaTime / 2f;
-            cam.fieldOfView = Mathf.Lerp(fieldOfView, 125f, t);
+            t += fovSpeedModifier * Time.deltaTime / 2f;
+            cam.fieldOfView = Mathf.Lerp(fieldOfView, maxFov, t);
 
         }
         else if (collisionEnter == true)
         {
-            cam.fieldOfView = 125.0f;
+            cam.fieldOfView = maxFov;
         }
     }
 
