@@ -22,6 +22,12 @@ public class PlayerMovement : MonoBehaviour
     private float crouchSpeed = 6f;
     [SerializeField]
     private float originalHeight;
+    [SerializeField]
+    private float originalSpeed;
+    [SerializeField]
+    private float smoothTime;
+    [SerializeField]
+    private float currentVelocity;
 
     Vector3 velocity;
     bool isGrounded;
@@ -31,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         originalHeight = controller.height;
+        originalSpeed = speed;
     }
     void Update()
     {
@@ -54,14 +61,14 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.C))
         {
-        
-            Crouch();
+            isCrouching = true;
         }
         else if(Input.GetKeyUp(KeyCode.C))
         {
             isCrouching = false;
-            controller.height = originalHeight;
         }
+
+        Crouch();
 
         velocity.y += gravity * Time.deltaTime;
 
@@ -70,11 +77,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Crouch()
     {
-        if(!isCrouching)
+        if(isCrouching)
         {
+            Debug.Log("T");
             speed = crouchSpeed;
-            controller.height = crouchHeight;
-            isCrouching = true;
+            controller.height = Mathf.SmoothDamp(controller.height, crouchHeight, ref currentVelocity, smoothTime);
+            //isCrouching = true;
+        }
+        else
+        {
+            controller.height = Mathf.SmoothDamp(controller.height, originalHeight, ref currentVelocity, smoothTime);
+            speed = originalSpeed;
         }
     }
+
 }
