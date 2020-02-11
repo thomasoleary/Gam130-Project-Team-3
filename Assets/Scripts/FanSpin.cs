@@ -8,12 +8,8 @@ public class FanSpin : MonoBehaviour
     [SerializeField]
     int spinSpeed = 20;
 
-    private GameObject target = null;
-    private Vector3 offset;
-
     void Start()
     {
-        target = null;
     }
 
     // Update is called once per frame

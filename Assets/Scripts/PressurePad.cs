@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorTrigger : MonoBehaviour
+public class PressurePad : MonoBehaviour
 {
     [SerializeField]
     GameObject movingObject;
