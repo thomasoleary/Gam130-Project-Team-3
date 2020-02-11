@@ -68,11 +68,17 @@ public class PlayerMovement : MonoBehaviour
             isCrouching = false;
         }
 
-        CrouchDetect();
+
+
 
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    void FixedUpdate()
+    {
+        CrouchDetect();
     }
 
     void CrouchDetect()
@@ -84,10 +90,12 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            //controller.height = Mathf.Lerp(controller.height, originalHeight, smoothTime);
-            controller.height = originalHeight;
             speed = originalSpeed;
+            controller.height = Mathf.Lerp(controller.height, originalHeight, smoothTime);   
+
         }
     }
 
+
 }
+
