@@ -14,10 +14,24 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
+    [SerializeField]
+    private bool isCrouching = false;
+    [SerializeField]
+    private float crouchHeight;
+    [SerializeField]
+    private float crouchSpeed = 6f;
+    [SerializeField]
+    private float originalHeight;
+
     Vector3 velocity;
     bool isGrounded;
 
     // Update is called once per frame
+
+    void Start()
+    {
+        originalHeight = controller.height;
+    }
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -38,9 +52,29 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
+        else if(Input.GetKeyDown(KeyCode.C))
+        {
+        
+            Crouch();
+        }
+        else if(Input.GetKeyUp(KeyCode.C))
+        {
+            isCrouching = false;
+            controller.height = originalHeight;
+        }
 
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    void Crouch()
+    {
+        if(!isCrouching)
+        {
+            speed = crouchSpeed;
+            controller.height = crouchHeight;
+            isCrouching = true;
+        }
     }
 }
