@@ -482,6 +482,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269393120}
   m_Mesh: {fileID: 4300006, guid: 492f047986429e741a73e714aceccc23, type: 3}
+--- !u!20 &874560043 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7785254508218054037, guid: d32fb756dd422be4cb7650290dc689f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 240204577}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &913085215 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 492f047986429e741a73e714aceccc23,
@@ -748,12 +754,12 @@ PrefabInstance:
     - target: {fileID: 5556092003221561528, guid: 4fd3a60eced991243b1eb4c7abedc7f0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.6
+      value: -11.52
       objectReference: {fileID: 0}
     - target: {fileID: 5556092003221561528, guid: 4fd3a60eced991243b1eb4c7abedc7f0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -21.2
+      value: -0.89756
       objectReference: {fileID: 0}
     - target: {fileID: 5556092003221561528, guid: 4fd3a60eced991243b1eb4c7abedc7f0,
         type: 3}
@@ -808,7 +814,17 @@ PrefabInstance:
     - target: {fileID: 5556092003221561528, guid: 4fd3a60eced991243b1eb4c7abedc7f0,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.36015
+      value: 0.7110802
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556092003221561531, guid: 4fd3a60eced991243b1eb4c7abedc7f0,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 874560043}
+    - target: {fileID: 5556092003221561531, guid: 4fd3a60eced991243b1eb4c7abedc7f0,
+        type: 3}
+      propertyPath: maxFov
+      value: 115
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fd3a60eced991243b1eb4c7abedc7f0, type: 3}
