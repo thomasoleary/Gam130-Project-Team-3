@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.1273174, g: 0.13414761, b: 0.12107885, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4669,6 +4669,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.028017476, y: 0.009999999, z: 0.009999994}
   m_Center: {x: -0.009008739, y: 0, z: 0.0000000023283062}
+--- !u!95 &836956966
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836956961}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3c7016e7b343d5a4caf17e76b653ae9c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &844030645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4982,6 +5001,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.32446
       objectReference: {fileID: 0}
+    - target: {fileID: 1026725591, guid: 7d1be2cb529ff8349b87bd5e126f9a59, type: 3}
+      propertyPath: movingObject
+      value: 
+      objectReference: {fileID: 836956961}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d1be2cb529ff8349b87bd5e126f9a59, type: 3}
 --- !u!1001 &884080370
@@ -5681,7 +5704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 36ebb9a9e2bbff843b92cc95e0cdc972, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 36ebb9a9e2bbff843b92cc95e0cdc972, type: 3}
       propertyPath: m_LocalPosition.x
