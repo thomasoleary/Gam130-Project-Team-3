@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Raycasting : MonoBehaviour
+public class PickObject : MonoBehaviour
 {
     RaycastHit hit;
     GameObject pickedUpObject;
@@ -29,7 +29,7 @@ public class Raycasting : MonoBehaviour
     void Pickup()
     {
         
-        if(Physics.Raycast(transform.position, transform.forward, out hit, 2))
+        if(Physics.Raycast(transform.position, transform.forward, out hit, 3))
         {
             if(hit.collider.gameObject.tag == "pickObject")
             {
