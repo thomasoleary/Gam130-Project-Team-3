@@ -89,7 +89,8 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             speed = originalSpeed;
-            controller.height = Mathf.Lerp(controller.height, originalHeight, smoothTime);   
+            // controller.height = Mathf.Lerp(controller.height, originalHeight, smoothTime);   
+            controller.height = originalHeight;
 
         }
     }
