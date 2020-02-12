@@ -13,7 +13,7 @@ public class FanSpin : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.Rotate(0, spinSpeed, 0 * Time.deltaTime);
     }
