@@ -4,34 +4,33 @@ using UnityEngine;
 
 public class FanCollision : MonoBehaviour
 {
-    private GameObject target = null;
-    private Vector3 offset;
+    Collider globalOther;
     void Start()
     {
-        target = null;
     }
 
-    public void OnTriggerEnter(Collider col)
+    public void OnTriggerEnter(Collider other)
     {
-        if(col.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player")
         {
             Debug.Log("Player standing on fan");
+            other.transform.parent.parent = this.transform.parent;
         }
-        target = col.gameObject;
-        offset = target.transform.position - transform.position;
     }
 
-    public void OnTriggerExit(Collider col)
+    public void OnTriggerExit(Collider other)
     {
-        target = null;
+        globalOther = other;
+        Invoke("DetachFromFan", 0.3f);
     }
 
-    public void LateUpdate()
+    private void DetachFromFan()
     {
-        if (target != null)
+        if(globalOther.gameObject.tag == "Player")
         {
-            target.transform.position = transform.position + offset;
+            globalOther.transform.parent.parent = null;
         }
     }
+    
 
 }
