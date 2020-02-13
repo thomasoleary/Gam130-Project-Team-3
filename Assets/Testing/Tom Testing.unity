@@ -600,6 +600,7 @@ GameObject:
   - component: {fileID: 447691647}
   - component: {fileID: 447691646}
   - component: {fileID: 447691645}
+  - component: {fileID: 447691650}
   m_Layer: 0
   m_Name: Object
   m_TagString: pickObject
@@ -634,7 +635,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 1.1, z: 1.1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &447691647
 MeshRenderer:
@@ -695,6 +696,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1818360610 &447691650
+ScaleConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447691644}
+  m_Enabled: 1
+  m_Weight: 1
+  m_ScaleAtRest: {x: 0.6, y: 0.6, z: 0.6}
+  m_ScaleOffset: {x: 1, y: 1, z: 1}
+  m_AffectScalingX: 1
+  m_AffectScalingY: 1
+  m_AffectScalingZ: 1
+  m_IsContraintActive: 0
+  m_IsLocked: 0
+  m_Sources: []
 --- !u!1 &530089859
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,7 +910,7 @@ PrefabInstance:
     - target: {fileID: 7785254509401162736, guid: d32fb756dd422be4cb7650290dc689f7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.142
+      value: 7.3
       objectReference: {fileID: 0}
     - target: {fileID: 7785254509401162736, guid: d32fb756dd422be4cb7650290dc689f7,
         type: 3}
@@ -902,7 +920,7 @@ PrefabInstance:
     - target: {fileID: 7785254509401162736, guid: d32fb756dd422be4cb7650290dc689f7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 27.348
+      value: 4.7
       objectReference: {fileID: 0}
     - target: {fileID: 7785254509401162736, guid: d32fb756dd422be4cb7650290dc689f7,
         type: 3}
@@ -1674,7 +1692,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2742063161195640092, guid: 82305b056099f8648a5b0d4f1cf7215f,
+    - target: {fileID: 2742063160255554304, guid: 82305b056099f8648a5b0d4f1cf7215f,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1689,7 +1707,7 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2742063160255554304, guid: 82305b056099f8648a5b0d4f1cf7215f,
+    - target: {fileID: 2742063161195640092, guid: 82305b056099f8648a5b0d4f1cf7215f,
         type: 3}
       propertyPath: m_Enabled
       value: 0

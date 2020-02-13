@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class PickObject : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class PickObject : MonoBehaviour
     public GameObject dropPoint;
     private bool hasItem;
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -22,8 +23,8 @@ public class PickObject : MonoBehaviour
             {
                 Pickup();
             }
-     
         }
+        
     }
 
     void Pickup()
@@ -34,6 +35,9 @@ public class PickObject : MonoBehaviour
             if(hit.collider.gameObject.tag == "pickObject")
             {
                 pickedUpObject = hit.collider.gameObject;
+
+                hit.collider.gameObject.transform.localScale = transform.localScale;
+
                 hit.collider.gameObject.transform.parent = transform;
                 hit.collider.gameObject.transform.position = (transform.position + transform.forward);
 
