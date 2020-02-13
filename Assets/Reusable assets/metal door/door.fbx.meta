@@ -26,7 +26,12 @@ ModelImporter:
     4300002: pCylinder1
     4300004: pCylinder2
     4300006: pCube2
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 09b57915547f98448bad593e29764f06, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -77,7 +82,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
