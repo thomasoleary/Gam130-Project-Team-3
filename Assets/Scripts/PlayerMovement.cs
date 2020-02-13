@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
 
     [SerializeField]
+    private float range;
+    public bool underObject;
+    [SerializeField]
     private bool isCrouching = false;
     [SerializeField]
     private float crouchHeight;
@@ -24,12 +27,14 @@ public class PlayerMovement : MonoBehaviour
     private float originalHeight;
     [SerializeField]
     private float originalSpeed;
+
+
     [SerializeField]
     private float smoothTime;
  
     Vector3 velocity;
     bool isGrounded;
-
+  
     // Update is called once per frame
 
     void Start()
@@ -39,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+        CrouchDetect();
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if(isGrounded && velocity.y < 0)
@@ -66,21 +72,14 @@ public class PlayerMovement : MonoBehaviour
             isCrouching = false;
         }
 
-
-
-
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
     }
 
-    void FixedUpdate()
-    {
-        CrouchDetect();
-    }
-
     void CrouchDetect()
     {
+
         if(isCrouching)
         {
             speed = crouchSpeed;
@@ -88,10 +87,30 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            speed = originalSpeed;
-            // controller.height = Mathf.Lerp(controller.height, originalHeight, smoothTime);   
-            controller.height = originalHeight;
+            if(!underObject)
+            {
+                Debug.Log("not under");
+                speed = originalSpeed;
+                // controller.height = Mathf.Lerp(controller.height, originalHeight, smoothTime);   
+                controller.height = originalHeight;
+            }
+      
+        }
+    }
 
+    void OnTriggerStay(Collider other)
+    {
+        if(other != null)
+        {
+            underObject = true;
+        }    
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other != null)
+        {
+            underObject = false;
         }
     }
 
