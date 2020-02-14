@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Black_Fade
+  m_Name: Scene Loader
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: FadeOut
@@ -18,7 +18,7 @@ AnimatorController:
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-    m_StateMachine: {fileID: 1107311369302759960}
+    m_StateMachine: {fileID: 1107830318774265370}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -28,40 +28,43 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1101 &1101336623776877900
+--- !u!1101 &1101277385285245316
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: FadeOut
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 1102742725448412656}
+  m_DstState: {fileID: 1102859148035116180}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0.7692308
+  m_ExitTime: 0.875
   m_HasExitTime: 0
-  m_HasFixedDuration: 0
+  m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1102 &1102235050114590678
+--- !u!1102 &1102140661549020214
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fade_In
+  m_Name: New_Fade_In
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
-  - {fileID: 1101336623776877900}
+  - {fileID: 1101277385285245316}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -71,20 +74,20 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 0de08722cca491b41900acd901eb7d49, type: 2}
+  m_Motion: {fileID: 7400000, guid: 21a900c53456e20448b6496602d7d1f6, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &1102742725448412656
+--- !u!1102 &1102859148035116180
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fade_Out
+  m_Name: New_Fade_Out
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -97,13 +100,13 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d91507788feb81444b5e6a17b3b8a5e3, type: 2}
+  m_Motion: {fileID: 7400000, guid: 2d6878e961ba5cd478a19930ef0e34a0, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1107 &1107311369302759960
+--- !u!1107 &1107830318774265370
 AnimatorStateMachine:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -113,11 +116,11 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 1102235050114590678}
-    m_Position: {x: 312, y: 24, z: 0}
+    m_State: {fileID: 1102140661549020214}
+    m_Position: {x: 288, y: 12, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 1102742725448412656}
-    m_Position: {x: 312, y: 132, z: 0}
+    m_State: {fileID: 1102859148035116180}
+    m_Position: {x: 288, y: 120, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -125,6 +128,6 @@ AnimatorStateMachine:
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
-  m_ExitPosition: {x: 408, y: 240, z: 0}
+  m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 1102235050114590678}
+  m_DefaultState: {fileID: 1102140661549020214}
