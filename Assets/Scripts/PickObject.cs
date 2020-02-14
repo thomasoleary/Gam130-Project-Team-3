@@ -36,10 +36,8 @@ public class PickObject : MonoBehaviour
             {
                 pickedUpObject = hit.collider.gameObject;
 
-                hit.collider.gameObject.transform.localScale = transform.localScale;
-
-                hit.collider.gameObject.transform.parent = transform;
-                hit.collider.gameObject.transform.position = (transform.position + transform.forward);
+                pickedUpObject.transform.parent = transform;
+                pickedUpObject.transform.position = (transform.position + transform.forward);
 
                 hit.rigidbody.useGravity = false;
                 hit.rigidbody.constraints = RigidbodyConstraints.FreezeAll;
