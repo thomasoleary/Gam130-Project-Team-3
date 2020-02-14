@@ -34,10 +34,7 @@ public class PickObject : MonoBehaviour
         {
             if(hit.collider.gameObject.tag == "pickObject")
             {
-                Vector3 originalScale = hit.collider.gameObject.transform.localScale;
-
                 pickedUpObject = hit.collider.gameObject;
-                //pickedUpObject.transform.localScale = originalScale;
 
                 pickedUpObject.transform.parent = transform;
                 pickedUpObject.transform.position = (transform.position + transform.forward);
