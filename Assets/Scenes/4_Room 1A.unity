@@ -4048,6 +4048,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Killbox
       objectReference: {fileID: 0}
+    - target: {fileID: 8252989044065952343, guid: d6b53a12f77cb9a40a000eb1509d63ac,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8252989044065952336, guid: d6b53a12f77cb9a40a000eb1509d63ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6862,6 +6867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077eb1d7514c66844ad68e76eb0fc880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!65 &1139761453
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11372,6 +11378,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 100040, guid: d91263184cfb6c34a9ef513d79aac24b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: d91263184cfb6c34a9ef513d79aac24b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100038, guid: d91263184cfb6c34a9ef513d79aac24b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: d91263184cfb6c34a9ef513d79aac24b, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -11408,10 +11426,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 100022, guid: d91263184cfb6c34a9ef513d79aac24b, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 100024, guid: d91263184cfb6c34a9ef513d79aac24b, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -11437,14 +11451,6 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 100036, guid: d91263184cfb6c34a9ef513d79aac24b, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 100038, guid: d91263184cfb6c34a9ef513d79aac24b, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 100040, guid: d91263184cfb6c34a9ef513d79aac24b, type: 3}
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
