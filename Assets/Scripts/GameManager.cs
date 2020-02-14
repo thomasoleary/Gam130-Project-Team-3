@@ -32,4 +32,16 @@ public class GameManager : MonoBehaviour
         }
      
     }
+
+    public void WriteInstructions()
+    {
+        // fungus shit 
+    }
+
+
+    public void StoryLineInfo()
+    {
+        // fungus shit 
+    }
+
 }
