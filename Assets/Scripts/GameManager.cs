@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public GameObject light1, light2;
     public TextMeshProUGUI trolleyText;
 
+
+    #region DoorSystem
     void ReachedAmount()
     {
         light1.SetActive(false);
@@ -32,4 +34,20 @@ public class GameManager : MonoBehaviour
         }
      
     }
+    #endregion
+
+    #region Collectables
+    public void WriteInstructions()
+    {
+        // fungus shit 
+    }
+
+
+    public void StoryLineInfo()
+    {
+        // fungus shit 
+    }
+
+    #endregion
+
 }
