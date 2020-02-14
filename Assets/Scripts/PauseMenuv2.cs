@@ -45,7 +45,7 @@ public class PauseMenuv2 : MonoBehaviour
     }
     public void ReturnToMainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(mainMenuScene);
         Time.timeScale = 1f;
     }
 
