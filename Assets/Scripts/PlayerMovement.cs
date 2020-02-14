@@ -89,7 +89,6 @@ public class PlayerMovement : MonoBehaviour
         {
             if(!underObject)
             {
-                Debug.Log("not under");
                 speed = originalSpeed;
                 // controller.height = Mathf.Lerp(controller.height, originalHeight, smoothTime);   
                 controller.height = originalHeight;
