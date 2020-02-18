@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class PressurePad : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    Light colourIndicator;
+
+    private Color redColour = Color.red;
+    private Color greenColour = Color.green;
+    private float duration = 1f;
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        colourIndicator.color = Color.Lerp(redColour, greenColour, duration);
+        Debug.Log("Player collided with trigger");
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
-        
+        colourIndicator.color = Color.Lerp(greenColour, redColour, duration);
+        Debug.Log("Player has left the trigger");
+
     }
 }
