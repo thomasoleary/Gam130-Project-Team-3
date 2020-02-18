@@ -42,9 +42,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private int maxAmmo;
     [SerializeField]
-    private GameObject projectile;
+    private Rigidbody projectile;
     [SerializeField]
-    private GameObject shootPoint;
+    private Transform shootPoint;
+    [SerializeField]
+    private GameObject potatoGun;
+    [SerializeField]
+    private float gunForce;
 
 
 
@@ -57,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+
         CrouchDetect();
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
@@ -85,11 +90,13 @@ public class PlayerMovement : MonoBehaviour
             isCrouching = false;
         }
         else if(Input.GetMouseButtonDown(0))
-        {
+        {        
+              
             if(hasPotatoGun)
             {
                 Shoot();
             }
+    
         }
 
         velocity.y += gravity * Time.deltaTime;
@@ -117,6 +124,16 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("ff");
+        if (other.gameObject.CompareTag("PotatoGun"))
+        {
+            hasPotatoGun = true;
+            Destroy(other.gameObject);
+            potatoGun.SetActive(true);
+        }
+    }
     void OnTriggerStay(Collider other)
     {
         if(other != null)
@@ -149,8 +166,10 @@ public class PlayerMovement : MonoBehaviour
         if(currentAmmo > 0)
         {
             currentAmmo--;
-            Instantiate(projectile, shootPoint.transform.position, shootPoint.transform.rotation);
-            projectile.GetComponent<Rigidbody>().AddForce(new Vector3(1000f, 0, 0));
+            Rigidbody projectileInstance;
+            projectileInstance = Instantiate(projectile, shootPoint.position, shootPoint.rotation) as Rigidbody;
+            projectileInstance.AddForce(shootPoint.forward * gunForce);
+
         }
         else
         {
