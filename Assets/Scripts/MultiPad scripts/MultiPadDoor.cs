@@ -23,7 +23,7 @@ public class MultiPadDoor : MonoBehaviour
     {
         startingPos.Set(transform.position.x, transform.position.y, transform.position.z);
         Debug.Log(startingPos);
-        endingPos.Set(startingPos[0], startingPos[1] + 4, startingPos[2]);
+        endingPos.Set(startingPos[0], startingPos[1] + 6, startingPos[2]);
         Debug.Log(endingPos);
     }
 
