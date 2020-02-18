@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MultiPressurePad : MonoBehaviour
+public class MultiPadDoor : MonoBehaviour
 {
     [SerializeField]
     GameObject pressurePadOne;
