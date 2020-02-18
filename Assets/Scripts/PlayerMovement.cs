@@ -34,7 +34,20 @@ public class PlayerMovement : MonoBehaviour
  
     Vector3 velocity;
     bool isGrounded;
-  
+
+    [SerializeField]
+    private bool hasPotatoGun;
+    [SerializeField]
+    private int currentAmmo;
+    [SerializeField]
+    private int maxAmmo;
+    [SerializeField]
+    private GameObject projectile;
+    [SerializeField]
+    private GameObject shootPoint;
+
+
+
     // Update is called once per frame
 
     void Start()
@@ -70,6 +83,13 @@ public class PlayerMovement : MonoBehaviour
         else if(Input.GetKeyUp(KeyCode.C))
         {
             isCrouching = false;
+        }
+        else if(Input.GetMouseButtonDown(0))
+        {
+            if(hasPotatoGun)
+            {
+                Shoot();
+            }
         }
 
         velocity.y += gravity * Time.deltaTime;
@@ -122,6 +142,21 @@ public class PlayerMovement : MonoBehaviour
     public void StoryLineInfo()
     {
         // fungus shit 
+    }
+
+    void Shoot()
+    {
+        if(currentAmmo > 0)
+        {
+            currentAmmo--;
+            Instantiate(projectile, shootPoint.transform.position, shootPoint.transform.rotation);
+            projectile.GetComponent<Rigidbody>().AddForce(new Vector3(1000f, 0, 0));
+        }
+        else
+        {
+            return;
+        }
+    
     }
 
 
