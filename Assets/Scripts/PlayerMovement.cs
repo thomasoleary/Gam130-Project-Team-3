@@ -126,7 +126,6 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("ff");
         if (other.gameObject.CompareTag("PotatoGun"))
         {
             hasPotatoGun = true;
