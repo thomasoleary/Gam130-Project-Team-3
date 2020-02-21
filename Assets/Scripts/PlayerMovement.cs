@@ -17,15 +17,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float range;
     public bool underObject;
-    [SerializeField]
     private bool isCrouching = false;
-    [SerializeField]
     private float crouchHeight;
     [SerializeField]
     private float crouchSpeed = 6f;
-    [SerializeField]
     private float originalHeight;
-    [SerializeField]
     private float originalSpeed;
 
 
@@ -42,6 +38,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private int maxAmmo;
     [SerializeField]
+    private float shootDelay;
+    private bool canShoot = true;
+    [SerializeField]
     private Rigidbody projectile;
     [SerializeField]
     private Transform shootPoint;
@@ -49,6 +48,12 @@ public class PlayerMovement : MonoBehaviour
     private GameObject potatoGun;
     [SerializeField]
     private float gunForce;
+
+    [SerializeField]
+    private GameObject potatoGunObject;
+    [SerializeField]
+    private Transform dropPoint;
+
 
 
 
@@ -98,6 +103,10 @@ public class PlayerMovement : MonoBehaviour
             }
     
         }
+        else if(Input.GetKeyDown(KeyCode.Q))
+        {
+            DropGun();
+        }
 
         velocity.y += gravity * Time.deltaTime;
 
@@ -140,8 +149,9 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnTriggerStay(Collider other)
     {
-        if(other != null)
+        if(other != null && other.gameObject.layer != 9)
         {
+            
             underObject = true;
         }    
     }
@@ -165,10 +175,19 @@ public class PlayerMovement : MonoBehaviour
         // fungus shit 
     }
 
+    IEnumerator ShootingDelay()
+    {
+        canShoot = false;
+        yield return new WaitForSeconds(shootDelay);
+        canShoot = true;
+    }
+
     void Shoot()
     {
-        if(currentAmmo > 0)
+      
+        if(currentAmmo > 0 && canShoot)
         {
+            StartCoroutine(ShootingDelay());
             currentAmmo--;
             Rigidbody projectileInstance;
             projectileInstance = Instantiate(projectile, shootPoint.position, shootPoint.rotation) as Rigidbody;
@@ -181,6 +200,23 @@ public class PlayerMovement : MonoBehaviour
         }
     
     }
+
+    void DropGun()
+    {
+        if(hasPotatoGun)
+        {
+            potatoGun.SetActive(false);
+            Instantiate(potatoGunObject, dropPoint.position, potatoGunObject.transform.rotation);
+            hasPotatoGun = false;
+        }
+        else
+        {
+            return;
+        }
+
+    }
+
+
 
 
 }
