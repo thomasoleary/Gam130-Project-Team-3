@@ -132,6 +132,11 @@ public class PlayerMovement : MonoBehaviour
             Destroy(other.gameObject);
             potatoGun.SetActive(true);
         }
+        else if(other.gameObject.CompareTag("Ammo"))
+        {
+            currentAmmo = maxAmmo;
+            Destroy(other.gameObject);
+        }
     }
     void OnTriggerStay(Collider other)
     {
