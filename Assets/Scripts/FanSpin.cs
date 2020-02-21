@@ -6,7 +6,7 @@ public class FanSpin : MonoBehaviour
 {
 
     [SerializeField]
-    int spinSpeed = 20;
+    float spinSpeed = 20f;
 
     void Start()
     {
