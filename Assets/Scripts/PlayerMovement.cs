@@ -53,7 +53,10 @@ public class PlayerMovement : MonoBehaviour
     private GameObject potatoGunObject;
     [SerializeField]
     private Transform dropPoint;
+    [SerializeField]
+    private Transform ammoRack;
 
+    Vector3 startPos;
 
 
 
@@ -63,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
     {
         originalHeight = controller.height;
         originalSpeed = speed;
+        startPos = ammoRack.localPosition;
     }
     void Update()
     {
@@ -144,6 +148,7 @@ public class PlayerMovement : MonoBehaviour
         else if(other.gameObject.CompareTag("Ammo"))
         {
             currentAmmo = maxAmmo;
+            ammoRack.localPosition = startPos;
             Destroy(other.gameObject);
         }
     }
@@ -192,6 +197,7 @@ public class PlayerMovement : MonoBehaviour
             Rigidbody projectileInstance;
             projectileInstance = Instantiate(projectile, shootPoint.position, shootPoint.rotation) as Rigidbody;
             projectileInstance.AddForce(shootPoint.forward * gunForce);
+            ammoRack.localPosition += new Vector3(-1.5f, 0, 0);
 
         }
         else

@@ -3178,46 +3178,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb08d284fcd4d0743ad54ee82dc12abd, type: 3}
---- !u!1 &284816053675531424 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 284816053675531424, guid: 75af125b7a4a75f41b9f23484864f281,
-    type: 3}
-  m_PrefabInstance: {fileID: 4132781108462846806}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &284816053675531425
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284816053675531424}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 21607cb0ca8d7dc4ebf5770055977edf, type: 3}
---- !u!1 &284816053675531428 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 284816053675531428, guid: 75af125b7a4a75f41b9f23484864f281,
-    type: 3}
-  m_PrefabInstance: {fileID: 4132781108462846806}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &284816053675531429
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284816053675531428}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300018, guid: 21607cb0ca8d7dc4ebf5770055977edf, type: 3}
 --- !u!23 &749948717360151976
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3942,7 +3902,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 749948717362078580}
   m_LocalRotation: {x: -0, y: -0.74992996, z: -0, w: 0.6615173}
-  m_LocalPosition: {x: 0.444, y: -0.3881, z: 1.247}
+  m_LocalPosition: {x: 0.435, y: -0.3881, z: 1.317}
   m_LocalScale: {x: 0.06428164, y: 0.06979697, z: 0.06428164}
   m_Children:
   - {fileID: 749948717362577242}
@@ -4341,11 +4301,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotatoGunEnvironment
       objectReference: {fileID: 0}
-    - target: {fileID: 284816053675531438, guid: 75af125b7a4a75f41b9f23484864f281,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 284816053675950222, guid: 75af125b7a4a75f41b9f23484864f281,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4400,61 +4355,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562424973214439831, guid: 75af125b7a4a75f41b9f23484864f281,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 284816053675531424, guid: 75af125b7a4a75f41b9f23484864f281,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 284816053675531430, guid: 75af125b7a4a75f41b9f23484864f281,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 284816053675531432, guid: 75af125b7a4a75f41b9f23484864f281,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 284816053675531434, guid: 75af125b7a4a75f41b9f23484864f281,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 284816053675531436, guid: 75af125b7a4a75f41b9f23484864f281,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 284816053675531426, guid: 75af125b7a4a75f41b9f23484864f281,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 284816053675531428, guid: 75af125b7a4a75f41b9f23484864f281,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 284816053675531440, guid: 75af125b7a4a75f41b9f23484864f281,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 284816053675531442, guid: 75af125b7a4a75f41b9f23484864f281,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 284816053675531444, guid: 75af125b7a4a75f41b9f23484864f281,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75af125b7a4a75f41b9f23484864f281, type: 3}
@@ -4529,7 +4429,7 @@ PrefabInstance:
         type: 3}
       propertyPath: projectile
       value: 
-      objectReference: {fileID: 8833585310314788511, guid: a82dea7efe1b0214eada400eeb11f70b,
+      objectReference: {fileID: 4345812122450611358, guid: b049c3e684975324db94c3235251c630,
         type: 3}
     - target: {fileID: 8259710706302252171, guid: d32fb756dd422be4cb7650290dc689f7,
         type: 3}
@@ -4582,6 +4482,16 @@ PrefabInstance:
       propertyPath: dropPoint
       value: 
       objectReference: {fileID: 1008732896}
+    - target: {fileID: 8259710706302252171, guid: d32fb756dd422be4cb7650290dc689f7,
+        type: 3}
+      propertyPath: ammoRack
+      value: 
+      objectReference: {fileID: 1002025751}
+    - target: {fileID: 8259710706302252171, guid: d32fb756dd422be4cb7650290dc689f7,
+        type: 3}
+      propertyPath: ammoRackOffset.x
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 222906978, guid: d32fb756dd422be4cb7650290dc689f7, type: 3}
       propertyPath: m_Enabled
       value: 1
