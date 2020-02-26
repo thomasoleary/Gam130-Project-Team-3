@@ -8,7 +8,6 @@ public class CameraDetection : MonoBehaviour
     public bool IsBeingDetected = false;
 
     public GameObject playerObject;
-    public float cameraViewRange;
 
     public GameObject light1, light2;
     public Light camLight;
