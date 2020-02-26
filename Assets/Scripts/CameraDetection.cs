@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class CameraDetection : MonoBehaviour
 {
-    bool InsideViewrange = false;
-    bool IsBeingDetected = false;
+    public bool InsideViewrange = false;
+    public bool IsBeingDetected = false;
 
     public GameObject playerObject;
     public float cameraViewRange;
 
     public GameObject light1, light2;
-
+    public Light camLight;
+    public Color origColor;
+    public Color detectColor;
     void Start()
     {
         playerObject = GameObject.FindGameObjectWithTag("Player").gameObject;
@@ -43,6 +45,7 @@ public class CameraDetection : MonoBehaviour
         if (player != null)
         {
             InsideViewrange = false;
+            IsBeingDetected = false;
         }
     }
 
@@ -84,7 +87,9 @@ public class CameraDetection : MonoBehaviour
         }
         else
         {
-            this.gameObject.GetComponent<Animator>().SetBool("SeePlayer", false);
+            //this.gameObject.GetComponent<Animator>().SetBool("SeePlayer", false);
+            this.gameObject.GetComponent<Animator>().enabled = true;
+            camLight.color = origColor;
             light1.SetActive(true);
             light2.SetActive(false);
             return;
@@ -94,8 +99,10 @@ public class CameraDetection : MonoBehaviour
 
     IEnumerator CheckDetection()
     {
+        this.gameObject.GetComponent<Animator>().enabled = false;
         light1.SetActive(false);
         light2.SetActive(true);
+        camLight.color = detectColor;
         yield return new WaitForSeconds(3);
         DetectedPlayer();
     }

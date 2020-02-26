@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1306,21 +1306,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253977138523637768, guid: b6bdc2e16b150ee45920a3cad02fada6,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1736145769}
-    - target: {fileID: 2253977138523637770, guid: b6bdc2e16b150ee45920a3cad02fada6,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253977138523637769, guid: b6bdc2e16b150ee45920a3cad02fada6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6bdc2e16b150ee45920a3cad02fada6, type: 3}
@@ -8782,7 +8767,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &905018340
 Light:
   m_ObjectHideFlags: 0
@@ -15622,6 +15607,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7785254508610158953, guid: d32fb756dd422be4cb7650290dc689f7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32fb756dd422be4cb7650290dc689f7, type: 3}
 --- !u!1 &1514743536
@@ -18339,12 +18329,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400020, guid: ca7a4d9dfa37e2542b108ee2ba63c5a9,
     type: 3}
   m_PrefabInstance: {fileID: 1720157539}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1736145769 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7785254509401162736, guid: d32fb756dd422be4cb7650290dc689f7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1509231091}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1739209505
 GameObject:
