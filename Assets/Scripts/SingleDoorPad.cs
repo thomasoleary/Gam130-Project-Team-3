@@ -21,7 +21,7 @@ public class SingleDoorPad : MonoBehaviour
         objectAnimation = movingObject.GetComponent<Animator>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         colourIndicator.color = Color.Lerp(redColour, greenColour, duration);
         Debug.Log("Player collided with trigger");

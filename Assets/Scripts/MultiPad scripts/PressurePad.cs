@@ -12,7 +12,7 @@ public class PressurePad : MonoBehaviour
     private float duration = 1f;
     public bool padActivated;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         padActivated = true;
         colourIndicator.color = Color.Lerp(redColour, greenColour, duration);
