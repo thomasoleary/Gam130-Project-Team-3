@@ -15,9 +15,9 @@ public class MetalDetectors : MonoBehaviour
         detectorSource = GetComponent<AudioSource>();
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "PlayerAudio")
         {
             Debug.Log("Player has entered Metal Detectors");
             PlayerEntered = true;
@@ -28,10 +28,11 @@ public class MetalDetectors : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "PlayerAudio")
         {
             Debug.Log("Player has left Metal Detectors");
             PlayerEntered = false;
+            detectorSource.Stop();
         }
     }
 
