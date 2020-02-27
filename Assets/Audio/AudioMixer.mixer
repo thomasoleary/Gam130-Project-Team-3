@@ -15,10 +15,13 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: b465b34335088384ea1fb1cef820057e
+    name: AlarmParameter
   m_AudioMixerGroupViews:
   - guids:
     - da2725b00e1daae4d84707a56cad3b39
+    - bda5c2a97b427a640950e7cce625bd05
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -31,7 +34,8 @@ AudioMixerGroupController:
   m_Name: Master
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: da2725b00e1daae4d84707a56cad3b39
-  m_Children: []
+  m_Children:
+  - {fileID: 243649348914860316}
   m_Volume: baa976618657f764ca0ca41317afdd52
   m_Pitch: 3755d7106e4f9ac43ac3a4b35e6920ab
   m_Effects:
@@ -65,3 +69,63 @@ AudioMixerSnapshotController:
   m_SnapshotID: bd64592631e12c0419128a65c2c7e675
   m_FloatValues: {}
   m_TransitionOverrides: {}
+--- !u!243 &243649348914860316
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Alarm
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: bda5c2a97b427a640950e7cce625bd05
+  m_Children: []
+  m_Volume: b465b34335088384ea1fb1cef820057e
+  m_Pitch: 9da2c0e6ed6f25a40904729d1231be5f
+  m_Effects:
+  - {fileID: 244848197028358348}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &244546551311063712
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: dd178486f3f505a4397f0741ad28c594
+  m_EffectName: Resonance Audio Renderer
+  m_MixLevel: 3cc901deab166e94d8d475a960345c3e
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &244685320649566556
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 34eac71bdba4434458a81201b53b2594
+  m_EffectName: Resonance Audio Renderer
+  m_MixLevel: 8dfef828de6e8054ba042187896c82c7
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &244848197028358348
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: d66bbefa570aca54db1d8bcd8032bcb0
+  m_EffectName: Attenuation
+  m_MixLevel: 52d7aee53246b2e4389b47e220a7a476
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0

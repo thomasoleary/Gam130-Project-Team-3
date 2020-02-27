@@ -1061,6 +1061,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: PlayerAudio
       objectReference: {fileID: 0}
+    - target: {fileID: 6012224056186382670, guid: d32fb756dd422be4cb7650290dc689f7,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.21452
+      objectReference: {fileID: 0}
+    - target: {fileID: 6012224056186382670, guid: d32fb756dd422be4cb7650290dc689f7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.479
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32fb756dd422be4cb7650290dc689f7, type: 3}
 --- !u!1 &934944716
@@ -1154,6 +1164,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934944716}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &985011128 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8784311651339889407, guid: 617bbd3976ea601469c5d2959acc778c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8784311651714627911}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1004731161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2132,31 +2148,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1101233056582884531 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1101233056582884531, guid: a0d8683ad01b93c4abd35739e07d1a0a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1898904565530873747}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1101233056582884532
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101233056582884531}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f3c9b91fa9200f745ac1d1f382e88b73, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1898904565530873747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2167,6 +2158,11 @@ PrefabInstance:
     - target: {fileID: 8589963797631012294, guid: a0d8683ad01b93c4abd35739e07d1a0a,
         type: 3}
       propertyPath: m_Name
+      value: Switch
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589963797631012294, guid: a0d8683ad01b93c4abd35739e07d1a0a,
+        type: 3}
+      propertyPath: m_TagString
       value: Switch
       objectReference: {fileID: 0}
     - target: {fileID: 7240014045751001154, guid: a0d8683ad01b93c4abd35739e07d1a0a,
@@ -2224,36 +2220,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5280848977666986129, guid: a0d8683ad01b93c4abd35739e07d1a0a,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.69263494
-      objectReference: {fileID: 0}
-    - target: {fileID: 5280848977666986129, guid: a0d8683ad01b93c4abd35739e07d1a0a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7212884
-      objectReference: {fileID: 0}
-    - target: {fileID: 5280848977666986129, guid: a0d8683ad01b93c4abd35739e07d1a0a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 87.678
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813719841888796498, guid: a0d8683ad01b93c4abd35739e07d1a0a,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813719841888796498, guid: a0d8683ad01b93c4abd35739e07d1a0a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813719841888796498, guid: a0d8683ad01b93c4abd35739e07d1a0a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 226171462, guid: a0d8683ad01b93c4abd35739e07d1a0a, type: 3}
+      propertyPath: metalDetectors
+      value: 
+      objectReference: {fileID: 985011128}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0d8683ad01b93c4abd35739e07d1a0a, type: 3}
 --- !u!1001 &2742063162030788272
@@ -2517,7 +2487,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 985011129, guid: 617bbd3976ea601469c5d2959acc778c, type: 3}
       propertyPath: rolloffMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 985011129, guid: 617bbd3976ea601469c5d2959acc778c, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243649348914860316, guid: ef68a856544f99f4f895bd06bb18dc0e,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 617bbd3976ea601469c5d2959acc778c, type: 3}
