@@ -9,12 +9,16 @@ public class Switch : MonoBehaviour
 
     public RaycastHit hit;
     private bool leverActivated = false;
-
+    
     public Camera playerCamera;
+
+    [SerializeField]
+    Animator switchAnimation;
 
     private void Start()
     {
         playerCamera = GameObject.Find("CharacterCamera").GetComponent<Camera>();
+        switchAnimation = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -29,7 +33,10 @@ public class Switch : MonoBehaviour
             {
                 if(hit.collider.gameObject.tag == "Switch" && Input.GetKeyDown("e"))
                 {
-                    Debug.Log("Switch Activated");
+                    // Debug.Log("Switch Activated");
+                    switchAnimation.SetBool("ActivateSwitch", true);
+
+                    metalDetectors.GetComponent<AudioSource>().enabled = false;
                 }
             }
         }
