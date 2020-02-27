@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Switch : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class Switch : MonoBehaviour
         switchAnimation = GetComponentInChildren<Animator>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         Vector3 fwd = playerCamera.transform.TransformDirection(Vector3.forward);
 
