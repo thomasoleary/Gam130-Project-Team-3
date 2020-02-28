@@ -9,7 +9,6 @@ public class Switch : MonoBehaviour
     private GameObject metalDetectors;
 
     public RaycastHit hit;
-    private bool leverActivated = false;
     
     public Camera playerCamera;
 

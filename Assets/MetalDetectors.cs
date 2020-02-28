@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class MetalDetectors : MonoBehaviour
 {   
@@ -32,8 +33,9 @@ public class MetalDetectors : MonoBehaviour
         {
             // Debug.Log("Player has entered Metal Detectors");
             PlayerEntered = true;
-            detectorSource.volume = 1f;
+            detectorSource.volume = 0.2f;
             detectorSource.PlayOneShot(detectorClip);
+            StartCoroutine(RestartScene());
             
         }
     }
@@ -48,5 +50,10 @@ public class MetalDetectors : MonoBehaviour
         }
     }
 
+    IEnumerator RestartScene()
+    {
+        yield return new WaitForSeconds(5);
+        Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+    }
 
 }
