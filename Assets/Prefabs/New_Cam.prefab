@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1804260103}
   - component: {fileID: 1804260104}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 2253977136950608894}
   - component: {fileID: 2253977136950608895}
   - component: {fileID: 2253977136950608864}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Capsule (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 2253977137313140113}
   - component: {fileID: 2253977137313140114}
   - component: {fileID: 2253977137313140115}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Capsule (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 2253977138523637767}
   - component: {fileID: 2253977138523637768}
   - component: {fileID: 2253977138523637769}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,6 @@ MonoBehaviour:
   InsideViewrange: 0
   IsBeingDetected: 0
   playerObject: {fileID: 0}
-  cameraViewRange: 10
   light1: {fileID: 2253977136950608866}
   light2: {fileID: 2253977137313140117}
   camLight: {fileID: 1804260104}
@@ -386,6 +385,38 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 79b85807aa07efd419547e272db0fbe2, type: 3}
       propertyPath: m_Name
       value: camera_new1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 79b85807aa07efd419547e272db0fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 79b85807aa07efd419547e272db0fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 79b85807aa07efd419547e272db0fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 79b85807aa07efd419547e272db0fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 79b85807aa07efd419547e272db0fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 79b85807aa07efd419547e272db0fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 79b85807aa07efd419547e272db0fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 79b85807aa07efd419547e272db0fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 79b85807aa07efd419547e272db0fbe2, type: 3}
       propertyPath: m_LocalPosition.x
