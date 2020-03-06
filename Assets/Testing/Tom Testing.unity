@@ -593,7 +593,7 @@ PrefabInstance:
     - target: {fileID: 7785254509401162736, guid: d32fb756dd422be4cb7650290dc689f7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21
+      value: -21.2
       objectReference: {fileID: 0}
     - target: {fileID: 7785254509401162736, guid: d32fb756dd422be4cb7650290dc689f7,
         type: 3}
@@ -603,7 +603,7 @@ PrefabInstance:
     - target: {fileID: 7785254509401162736, guid: d32fb756dd422be4cb7650290dc689f7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.6
+      value: -15.8
       objectReference: {fileID: 0}
     - target: {fileID: 7785254509401162736, guid: d32fb756dd422be4cb7650290dc689f7,
         type: 3}
@@ -613,7 +613,7 @@ PrefabInstance:
     - target: {fileID: 7785254509401162736, guid: d32fb756dd422be4cb7650290dc689f7,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5679014
+      value: 0.98282695
       objectReference: {fileID: 0}
     - target: {fileID: 7785254509401162736, guid: d32fb756dd422be4cb7650290dc689f7,
         type: 3}
@@ -623,7 +623,7 @@ PrefabInstance:
     - target: {fileID: 7785254509401162736, guid: d32fb756dd422be4cb7650290dc689f7,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8230967
+      value: 0.18452981
       objectReference: {fileID: 0}
     - target: {fileID: 7785254509401162736, guid: d32fb756dd422be4cb7650290dc689f7,
         type: 3}
@@ -638,7 +638,7 @@ PrefabInstance:
     - target: {fileID: 7785254509401162736, guid: d32fb756dd422be4cb7650290dc689f7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 69.208
+      value: 158.733
       objectReference: {fileID: 0}
     - target: {fileID: 7785254509401162736, guid: d32fb756dd422be4cb7650290dc689f7,
         type: 3}
@@ -1058,6 +1058,9 @@ MonoBehaviour:
   pressurePadOne: {fileID: 1142000324}
   pressurePadTwo: {fileID: 229470696}
   pressurePadThree: {fileID: 304936556}
+  startingPos: 3
+  endingPos: 7
+  duration: 3
 --- !u!65 &1222719419
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2066,25 +2069,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f8ca2e4e92262f4a86a8cec961bcd2d, type: 3}
---- !u!1 &7231416932370434913 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7231416932370434913, guid: d32fb756dd422be4cb7650290dc689f7,
-    type: 3}
-  m_PrefabInstance: {fileID: 885742515}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &7231416932370434914
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7231416932370434913}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 1, z: 0.5}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &8784311651714627911
 PrefabInstance:
   m_ObjectHideFlags: 0
