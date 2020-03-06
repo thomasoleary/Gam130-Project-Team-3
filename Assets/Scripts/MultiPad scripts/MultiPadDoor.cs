@@ -19,23 +19,15 @@ public class MultiPadDoor : MonoBehaviour
     private bool pad2;
     private bool pad3;
 
-    Vector3 startingPos; // Grab original position of the door/wall
-    Vector3 endingPos; // Same position except Y position is altered
-    private float duration = 5f; 
-
-    void Start()
-    {
-        // sets startingPos vector to position of Wall
-        startingPos.Set(transform.position.x, transform.position.y, transform.position.z);
-        //Debug.Log(startingPos);
-        
-        // adding value onto startingPos
-        endingPos.Set(startingPos[0], startingPos[1] + 6, startingPos[2]);
-        //Debug.Log(endingPos);
-    }
+    [SerializeField]
+    private float startingPos;
+    [SerializeField]
+    private float endingPos;
+    [SerializeField]
+    private float duration;
 
     // Update is called once per frame
-    void FixedUpdate()
+    void LateUpdate()
     {
         // setting bools value of padActivated in PressurePad
         pad1 = pressurePadOne.GetComponent<PressurePad>().padActivated;
@@ -50,12 +42,12 @@ public class MultiPadDoor : MonoBehaviour
         // if all pads are activated, move between values 
         if(pad1 && pad2 && pad3)
         {
-            transform.position = Vector3.Lerp(startingPos, endingPos, Time.time - duration);
+            //transform.position = Vector3.Lerp(startingPos, endingPos, Time.time - duration);
+            LeanTween.moveLocalY(gameObject, endingPos, duration);
         }
         else
         {
-            // go back to original position if no
-            transform.position = startingPos;
+            LeanTween.moveLocalY(gameObject, startingPos, duration);
         }
     }
     
