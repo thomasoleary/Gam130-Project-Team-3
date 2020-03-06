@@ -13,17 +13,26 @@ public class CameraDetection : MonoBehaviour
     public Light camLight;
     public Color origColor;
     public Color detectColor;
+
+    Animator anim;
+
+    [SerializeField]
+    private float camRotationSpeed;
+    
     void Start()
     {
         playerObject = GameObject.FindGameObjectWithTag("Player").gameObject;
+        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
-        if(InsideViewrange)
+        anim.speed = camRotationSpeed;
+
+        if (InsideViewrange)
         {
             Debug.Log("inside view range");
-            HandleRaycast();
+            HandleRaycast();      
         }
 
     }
