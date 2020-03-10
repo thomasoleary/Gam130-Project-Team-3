@@ -14,29 +14,50 @@ public class CameraDetection : MonoBehaviour
     public Color origColor;
     public Color detectColor;
 
-    Animator anim;
 
+    public enum CamState
+    {
+        lookingLeft,
+        LookingRight,
+        Detected
+    }
+    public CamState cameraState;
+    [SerializeField]
+    private GameObject camLeftPos;
+    [SerializeField]
+    private GameObject camRightPos;
     [SerializeField]
     private float camRotationSpeed;
+    [SerializeField]
+    private float camTurnDelay;
+
+
+
+    Animator anim;
+
+
     
     void Start()
     {
         playerObject = GameObject.FindGameObjectWithTag("Player").gameObject;
         anim = GetComponent<Animator>();
+
+
     }
 
     void Update()
     {
+        CameraChecker();
         anim.speed = camRotationSpeed;
+
 
         if (InsideViewrange)
         {
             Debug.Log("inside view range");
-            HandleRaycast();      
+            HandleRaycast();
         }
 
     }
-
     void OnTriggerEnter(Collider other)
     {
         PlayerMovement player = other.gameObject.GetComponent<PlayerMovement>();
@@ -104,6 +125,37 @@ public class CameraDetection : MonoBehaviour
         }
   
     }
+
+    public void CameraChecker()
+    {
+        if(camLeftPos != null)
+        {
+            if (cameraState == CamState.lookingLeft)
+            {
+                transform.rotation = Quaternion.Lerp(transform.rotation, camLeftPos.transform.rotation, camRotationSpeed * Time.deltaTime);
+                StartCoroutine(CamRotateRight());
+            }
+            else if (cameraState == CamState.LookingRight)
+            {
+                transform.rotation = Quaternion.Lerp(transform.rotation, camRightPos.transform.rotation, camRotationSpeed * Time.deltaTime);
+                StartCoroutine(CamRotateLeft());
+            }
+        }
+    
+    }
+
+    IEnumerator CamRotateLeft()
+    {
+        yield return new WaitForSeconds(camTurnDelay);
+        cameraState = CamState.lookingLeft;
+    }
+
+    IEnumerator CamRotateRight()
+    {
+        yield return new WaitForSeconds(camTurnDelay);
+        cameraState = CamState.LookingRight;
+    }
+
 
     IEnumerator CheckDetection()
     {
