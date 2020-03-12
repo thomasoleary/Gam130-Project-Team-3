@@ -46,6 +46,7 @@ public class CameraDetection : MonoBehaviour
 
     void Update()
     {
+       
         CameraChecker();
 
         if (InsideViewrange)
