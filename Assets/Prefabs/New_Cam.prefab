@@ -358,7 +358,6 @@ GameObject:
   - component: {fileID: 2253977138523637770}
   - component: {fileID: 2253977138523637767}
   - component: {fileID: 2253977138523637768}
-  - component: {fileID: 2253977138523637769}
   m_Layer: 2
   m_Name: Head
   m_TagString: Untagged
@@ -422,25 +421,6 @@ MonoBehaviour:
   camRotationSpeed: 0.3
   camTurnDelay: 4
   detectionTimeCount: 3
---- !u!95 &2253977138523637769
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2253977138523637771}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8859fd2fa052b484385540d5c0c5344a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2253977137133543050
 PrefabInstance:
   m_ObjectHideFlags: 0
