@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class CameraDetection : MonoBehaviour
 {
-    public bool InsideViewrange = false;
-    public bool IsBeingDetected = false;
+
 
     public GameObject playerObject;
 
@@ -18,42 +17,39 @@ public class CameraDetection : MonoBehaviour
     public enum CamState
     {
         lookingLeft,
-        LookingRight,
-        Detected
+        LookingRight
     }
     public CamState cameraState;
     [SerializeField]
     private GameObject camLeftPos;
     [SerializeField]
     private GameObject camRightPos;
+
     [SerializeField]
     private float camRotationSpeed;
     [SerializeField]
     private float camTurnDelay;
+    [SerializeField]
+    private float detectionTimeCount;
 
+    bool camDetect = false;
+    bool InsideViewrange = false;
+    bool IsBeingDetected = false;
 
-
-    Animator anim;
 
 
     
     void Start()
     {
         playerObject = GameObject.FindGameObjectWithTag("Player").gameObject;
-        anim = GetComponent<Animator>();
-
-
     }
 
     void Update()
     {
         CameraChecker();
-        anim.speed = camRotationSpeed;
-
 
         if (InsideViewrange)
         {
-            Debug.Log("inside view range");
             HandleRaycast();
         }
 
@@ -94,12 +90,11 @@ public class CameraDetection : MonoBehaviour
                 
                 Debug.DrawRay(transform.position, (playerObject.transform.position - transform.position), Color.red);
                 IsBeingDetected = true;
-                this.gameObject.GetComponent<Animator>().SetBool("SeePlayer", true);
+                camDetect = true;       
                 StartCoroutine(CheckDetection());
             }
             else
             {
-                Debug.Log("not being detected");
                 IsBeingDetected = false;
                 StopCoroutine(CheckDetection());
             }
@@ -112,15 +107,13 @@ public class CameraDetection : MonoBehaviour
         if (IsBeingDetected)
         {
             Debug.Log("Game Over");
-            // can add the ending bit here
         }
         else
         {
-            //this.gameObject.GetComponent<Animator>().SetBool("SeePlayer", false);
-            this.gameObject.GetComponent<Animator>().enabled = true;
-            camLight.color = origColor;
+            camLight.color = origColor;    
             light1.SetActive(true);
             light2.SetActive(false);
+            camDetect = false;
             return;
         }
   
@@ -128,7 +121,7 @@ public class CameraDetection : MonoBehaviour
 
     public void CameraChecker()
     {
-        if(camLeftPos != null)
+        if(camLeftPos != null && !camDetect)
         {
             if (cameraState == CamState.lookingLeft)
             {
@@ -140,6 +133,7 @@ public class CameraDetection : MonoBehaviour
                 transform.rotation = Quaternion.Lerp(transform.rotation, camRightPos.transform.rotation, camRotationSpeed * Time.deltaTime);
                 StartCoroutine(CamRotateLeft());
             }
+
         }
     
     }
@@ -158,12 +152,11 @@ public class CameraDetection : MonoBehaviour
 
 
     IEnumerator CheckDetection()
-    {
-        this.gameObject.GetComponent<Animator>().enabled = false;
+    {  
         light1.SetActive(false);
         light2.SetActive(true);
         camLight.color = detectColor;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(detectionTimeCount);       
         DetectedPlayer();
     }
 
