@@ -16,13 +16,13 @@ public class PressurePad : MonoBehaviour
     {
         padActivated = true;
         colourIndicator.color = Color.Lerp(redColour, greenColour, duration);
-        // Debug.Log("Player collided with trigger");
+        Debug.Log("Player collided with trigger");
     }
 
     private void OnTriggerExit(Collider other)
     {
         padActivated = false;
         colourIndicator.color = Color.Lerp(greenColour, redColour, duration);
-        // Debug.Log("Player has left the trigger");
+        Debug.Log("Player has left the trigger");
     }
 }
