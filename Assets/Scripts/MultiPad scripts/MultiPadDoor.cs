@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class MultiPadDoor : MonoBehaviour
 {
-
-    //Refrence Pressure Pads in scenes
     [SerializeField]
-    GameObject pressurePadOne;
-    [SerializeField]
-    GameObject pressurePadTwo;
-    [SerializeField]
-    GameObject pressurePadThree;
-
     private GameObject[] ArrayOfPads = new GameObject[3];
     private int count;
 
@@ -45,28 +37,33 @@ public class MultiPadDoor : MonoBehaviour
             currentLerpTime = lerpTime;
         }
 
-        for (int i = 0; i < ArrayOfPads.Length; i++)
+        /*for (int i = 0; i < ArrayOfPads.Length; i++)
         {
-            if (ArrayOfPads[i].GetComponent<PressurePad>().padActivated == true)
+            if (ArrayOfPads[i].GetComponent<PressurePad>().padActivated == false)
             {
                 count++;
             }
         }
         Debug.Log(count);
+        */
 
+        if (AllPadsActivated())
+        {
+            Debug.Log("All pads");
+        }
     }
 
-    /*private bool AllPadsActivated()
+    private bool AllPadsActivated()
     {
         for(int i = 0; i < ArrayOfPads.Length; i++)
         {
-            if(ArrayOfPads[i].GetComponent<PressurePad>().padActivated == true)
+            if(ArrayOfPads[i].GetComponent<PressurePad>().padActivated == false)
             {
-                return true;
+                return false;
             }
         }
 
-        return false;
+        return true;
     }
-    */
+    
 }

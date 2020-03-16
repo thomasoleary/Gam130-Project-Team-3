@@ -11,13 +11,13 @@ public class PressurePad : MonoBehaviour
     private Color greenColour = Color.green;
     public bool padActivated;
 
-    private void OnTriggerStay(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         padActivated = true;
         colourIndicator.color = Color.Lerp(redColour, greenColour, 1f);
     }
 
-    private void OnTriggerExit(Collider other)
+    public void OnTriggerExit(Collider other)
     {
         padActivated = false;
         colourIndicator.color = Color.Lerp(greenColour, redColour, 1f);
