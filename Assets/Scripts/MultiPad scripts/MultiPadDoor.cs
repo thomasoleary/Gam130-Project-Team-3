@@ -4,26 +4,19 @@ using UnityEngine;
 
 public class MultiPadDoor : MonoBehaviour
 {
-    [SerializeField]
     private GameObject[] ArrayOfPads = new GameObject[3];
-    private int count;
 
     private Vector3 startingPos;
     private Vector3 endingPos;
+    private float currentPos;
 
     [SerializeField]
     private float distance = 4f;
-
-    private float lerpTime = 5;
-    private float currentLerpTime = 0;
-
-    private float Perc;
 
     void Start()
     {
         startingPos = transform.position;
         endingPos = transform.position + Vector3.up * distance;
-
 
         ArrayOfPads = GameObject.FindGameObjectsWithTag("PressurePad");
     }
@@ -31,25 +24,20 @@ public class MultiPadDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentLerpTime += Time.deltaTime;
-        if (currentLerpTime >= lerpTime)
-        {
-            currentLerpTime = lerpTime;
-        }
-
-        /*for (int i = 0; i < ArrayOfPads.Length; i++)
-        {
-            if (ArrayOfPads[i].GetComponent<PressurePad>().padActivated == false)
-            {
-                count++;
-            }
-        }
-        Debug.Log(count);
-        */
+        currentPos = transform.position.y;
 
         if (AllPadsActivated())
         {
-            Debug.Log("All pads");
+            StopCoroutine("CloseDoor");
+            StartCoroutine("OpenDoor");
+        }
+        else if (!AllPadsActivated())
+        {
+            if(currentPos != startingPos[1])
+            {
+                StopCoroutine("OpenDoor");
+                StartCoroutine("CloseDoor");
+            }
         }
     }
 
@@ -65,5 +53,17 @@ public class MultiPadDoor : MonoBehaviour
 
         return true;
     }
-    
+
+
+    IEnumerator OpenDoor()
+    {
+        yield return new WaitForSeconds(0.5f);
+        LeanTween.moveLocalY(gameObject, endingPos[1], 0.5f);
+    }
+
+    IEnumerator CloseDoor()
+    {
+        yield return new WaitForSeconds(0.5f);
+        LeanTween.moveLocalY(gameObject, startingPos[1], 0.5f);
+    }
 }
