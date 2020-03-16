@@ -16,7 +16,10 @@ public class MultiPadDoor : MonoBehaviour
     void Start()
     {
         startingPos = transform.position;
+        Debug.Log(startingPos);
+
         endingPos = transform.position + Vector3.up * distance;
+        Debug.Log(endingPos);
 
         ArrayOfPads = GameObject.FindGameObjectsWithTag("PressurePad");
     }
