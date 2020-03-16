@@ -31,11 +31,14 @@ public class MetalDetectors : MonoBehaviour
     {
         if(other.tag == "PlayerAudio" && DetectorsActivated)
         {
-            // Debug.Log("Player has entered Metal Detectors");
             PlayerEntered = true;
-            detectorSource.volume = 0.2f;
-            detectorSource.PlayOneShot(detectorClip);
-            StartCoroutine(RestartScene());
+
+            if (PlayerEntered) 
+            {
+                detectorSource.volume = 0.2f;
+                detectorSource.PlayOneShot(detectorClip);
+                StartCoroutine("RestartScene");
+            }
             
         }
     }
@@ -44,9 +47,15 @@ public class MetalDetectors : MonoBehaviour
     {
         if(other.tag == "PlayerAudio" && DetectorsActivated)
         {
-            // Debug.Log("Player has left Metal Detectors");
             PlayerEntered = false;
-            detectorSource.Stop();
+
+            if (!PlayerEntered)
+            {
+                StopCoroutine("RestartScene");
+                detectorSource.Stop();
+                
+            }
+            
         }
     }
 
