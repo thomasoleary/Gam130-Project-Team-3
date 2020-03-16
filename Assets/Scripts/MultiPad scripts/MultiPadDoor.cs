@@ -13,42 +13,60 @@ public class MultiPadDoor : MonoBehaviour
     [SerializeField]
     GameObject pressurePadThree;
 
+    private GameObject[] ArrayOfPads = new GameObject[3];
+    private int count;
 
-    //private bools that will be set to booleans in PressurePad.cs
-    private bool pad1;
-    private bool pad2;
-    private bool pad3;
+    private Vector3 startingPos;
+    private Vector3 endingPos;
 
     [SerializeField]
-    private float startingPos;
-    [SerializeField]
-    private float endingPos;
-    [SerializeField]
-    private float duration;
+    private float distance = 4f;
+
+    private float lerpTime = 5;
+    private float currentLerpTime = 0;
+
+    private float Perc;
+
+    void Start()
+    {
+        startingPos = transform.position;
+        endingPos = transform.position + Vector3.up * distance;
+
+
+        ArrayOfPads = GameObject.FindGameObjectsWithTag("PressurePad");
+    }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
-        // setting bools value of padActivated in PressurePad
-        pad1 = pressurePadOne.GetComponent<PressurePad>().padActivated;
-        pad2 = pressurePadTwo.GetComponent<PressurePad>().padActivated;
-        pad3 = pressurePadThree.GetComponent<PressurePad>().padActivated;
+        currentLerpTime += Time.deltaTime;
+        if (currentLerpTime >= lerpTime)
+        {
+            currentLerpTime = lerpTime;
+        }
 
-        OpenDoor();
-        
+        for (int i = 0; i < ArrayOfPads.Length; i++)
+        {
+            if (ArrayOfPads[i].GetComponent<PressurePad>().padActivated == true)
+            {
+                count++;
+            }
+        }
+        Debug.Log(count);
+
     }
-    private void OpenDoor()
+
+    /*private bool AllPadsActivated()
     {
-        // if all pads are activated, move between values 
-        if(pad1 && pad2 && pad3)
+        for(int i = 0; i < ArrayOfPads.Length; i++)
         {
-            //transform.position = Vector3.Lerp(startingPos, endingPos, Time.time - duration);
-            LeanTween.moveLocalY(gameObject, endingPos, duration);
+            if(ArrayOfPads[i].GetComponent<PressurePad>().padActivated == true)
+            {
+                return true;
+            }
         }
-        else
-        {
-            LeanTween.moveLocalY(gameObject, startingPos, duration);
-        }
+
+        return false;
     }
-    
+    */
 }
