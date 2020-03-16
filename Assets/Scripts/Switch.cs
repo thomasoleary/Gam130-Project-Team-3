@@ -8,17 +8,34 @@ public class Switch : MonoBehaviour
     [SerializeField]
     private GameObject metalDetectors;
 
-    public RaycastHit hit;
+    [SerializeField]
+    private GameObject movingWall;
+
+    private RaycastHit hit;
+
+    private Camera playerCamera;
+
+    private Animator switchAnimation;
+
+    private bool IsSwitchActivated = false;
     
-    public Camera playerCamera;
+    // MoveWall() related variables
+    private Vector3 startPos;
+    private Vector3 endPos;
 
     [SerializeField]
-    Animator switchAnimation;
+    private float distance = 5f;
+
+    private float lerpTime = 5;
+    private float currentLerpTime = 0;
 
     private void Start()
     {
         playerCamera = GameObject.Find("CharacterCamera").GetComponent<Camera>();
         switchAnimation = GetComponentInChildren<Animator>();
+
+        startPos = movingWall.transform.position;
+        endPos = movingWall.transform.position + Vector3.up * distance;
     }
 
     private void FixedUpdate()
@@ -37,8 +54,25 @@ public class Switch : MonoBehaviour
                     switchAnimation.SetBool("ActivateSwitch", true);
 
                     metalDetectors.GetComponent<AudioSource>().enabled = false;
+                    IsSwitchActivated = true;
                 }
             }
         }
+
+        if (IsSwitchActivated) { MoveWall(); }
+    }
+
+
+    
+    void MoveWall()
+    {
+        currentLerpTime += Time.deltaTime;
+        if(currentLerpTime >= lerpTime)
+        {
+            currentLerpTime = lerpTime;
+        }
+
+        float Perc = currentLerpTime / lerpTime;
+        movingWall.transform.position = Vector3.Lerp(startPos, endPos, Perc);
     }
 }
