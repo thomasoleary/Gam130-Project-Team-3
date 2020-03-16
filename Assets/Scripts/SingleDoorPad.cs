@@ -30,6 +30,9 @@ public class SingleDoorPad : MonoBehaviour
     {
         startingPos = movingObject.transform.position;
         endingPos = startingPos + Vector3.up * distance;
+
+        Debug.Log(startingPos);
+        Debug.Log(endingPos);
     }
 
     private void Update()
