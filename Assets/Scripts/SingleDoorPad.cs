@@ -10,7 +10,17 @@ public class SingleDoorPad : MonoBehaviour
     [SerializeField]
     Light colourIndicator;
 
-    Animator objectAnimation;
+    private Vector3 startingPos;
+    private Vector3 endingPos;
+    private Vector3 currentPos;
+
+    [SerializeField]
+    private float distance = 4f;
+
+    private float lerpTime = 5f;
+    private float currentLerpTime = 0f;
+    private float Perc;
+
 
     private Color redColour = Color.red;
     private Color greenColour = Color.green;
@@ -18,24 +28,38 @@ public class SingleDoorPad : MonoBehaviour
 
     private void Start()
     {
-        objectAnimation = movingObject.GetComponent<Animator>();
+        startingPos = movingObject.transform.position;
+        endingPos = startingPos + Vector3.up * distance;
+    }
+
+    private void Update()
+    {
+        currentLerpTime += Time.deltaTime;
+        if(currentLerpTime >= lerpTime)
+        {
+            currentLerpTime = lerpTime;
+        }
     }
 
     private void OnTriggerStay(Collider other)
     {
+        Perc = currentLerpTime / lerpTime;
         colourIndicator.color = Color.Lerp(redColour, greenColour, duration);
-        Debug.Log("Player collided with trigger");
+        //movingObject.transform.position = Vector3.Lerp(startingPos, endingPos, Perc);
 
-        objectAnimation.SetBool("OpenDoor", true);
+        LeanTween.moveLocalY(movingObject, endingPos[1], Perc);
         
     }
 
     private void OnTriggerExit(Collider other)
     {
+        Perc = currentLerpTime / lerpTime;
+        currentPos = transform.position;
         colourIndicator.color = Color.Lerp(greenColour, redColour, duration);
-        Debug.Log("Player has left the trigger");
 
-        objectAnimation.SetBool("OpenDoor", false);
-        
+        LeanTween.moveLocalY(movingObject, startingPos[1], Perc);
+
+        //movingObject.transform.position = Vector3.Lerp(currentPos, startingPos, Perc);
+
     }
 }
