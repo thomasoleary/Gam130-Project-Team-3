@@ -74,5 +74,7 @@ public class Switch : MonoBehaviour
 
         float Perc = currentLerpTime / lerpTime;
         movingWall.transform.position = Vector3.Lerp(startPos, endPos, Perc);
+
+        //LeanTween.moveLocalY(movingWall, endPos[1], 3f);
     }
 }
