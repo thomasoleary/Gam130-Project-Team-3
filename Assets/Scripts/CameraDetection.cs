@@ -12,6 +12,7 @@ public class CameraDetection : MonoBehaviour
     public Light camLight;
     public Color origColor;
     public Color detectColor;
+    public GameObject detectText;
 
 
     public enum CamState
@@ -42,6 +43,7 @@ public class CameraDetection : MonoBehaviour
     void Start()
     {
         playerObject = GameObject.FindGameObjectWithTag("Player").gameObject;
+        detectText.SetActive(false);
     }
 
     void Update()
@@ -107,7 +109,8 @@ public class CameraDetection : MonoBehaviour
     {
         if (IsBeingDetected)
         {
-            SceneManager.LoadScene("Stealth level");
+            detectText.SetActive(true);
+            Invoke("TextDetect", 2);
         }
         else
         {
@@ -120,6 +123,10 @@ public class CameraDetection : MonoBehaviour
   
     }
 
+    private void TextDetect()
+    {
+        SceneManager.LoadScene("Stealth level");
+    }
     public void CameraChecker()
     {
         if(camLeftPos != null && !camDetect)
@@ -160,5 +167,6 @@ public class CameraDetection : MonoBehaviour
         yield return new WaitForSeconds(detectionTimeCount);       
         DetectedPlayer();
     }
+
 
 }
