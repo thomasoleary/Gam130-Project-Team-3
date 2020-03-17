@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class CameraDetection : MonoBehaviour
 {
 
@@ -107,7 +107,7 @@ public class CameraDetection : MonoBehaviour
     {
         if (IsBeingDetected)
         {
-            Debug.Log("Game Over");
+            SceneManager.LoadScene("Stealth level");
         }
         else
         {
