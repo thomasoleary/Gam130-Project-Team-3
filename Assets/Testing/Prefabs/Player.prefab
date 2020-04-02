@@ -88,7 +88,6 @@ GameObject:
   - component: {fileID: 2425377379153051437}
   - component: {fileID: 7328568822883107928}
   - component: {fileID: 4548632520690764569}
-  - component: {fileID: 5500414523647860288}
   m_Layer: 0
   m_Name: CharacterCamera
   m_TagString: Untagged
@@ -201,20 +200,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropPoint: {fileID: 2742508986264044626}
---- !u!114 &5500414523647860288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7785254508218054026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d939edc51ed46ca4da9e9afd32201153, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SobelResolution: 2.13
-  outlineColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7785254508610158958
 GameObject:
   m_ObjectHideFlags: 0
