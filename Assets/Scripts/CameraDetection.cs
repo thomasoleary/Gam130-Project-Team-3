@@ -94,12 +94,12 @@ public class CameraDetection : MonoBehaviour
                 Debug.DrawRay(transform.position, (playerObject.transform.position - transform.position), Color.red);
                 IsBeingDetected = true;
                 camDetect = true;       
-                StartCoroutine(CheckDetection());
+                StartCoroutine("CheckDetection");
             }
             else
             {
                 IsBeingDetected = false;
-                StopCoroutine(CheckDetection());
+                StopCoroutine("CheckDetection");
             }
 
         }
@@ -125,7 +125,7 @@ public class CameraDetection : MonoBehaviour
 
     private void TextDetect()
     {
-        SceneManager.LoadScene("Stealth level");
+        Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
     }
     public void CameraChecker()
     {
