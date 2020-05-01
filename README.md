@@ -1,6 +1,6 @@
 ## Team 3 GAM130 Project: Groceries
 
-### The Team
+## The Team
 #### Programmers
 [Thomas (Tom) O'Leary](https://github.com/thomasoleary/)
 
@@ -28,3 +28,7 @@
 #### Writers
 [Maciej Bezkorowajny](https://github.com/macbezik)
 
+## Resources
+[Fungus](https://fungusgames.com/)
+
+[LeanTween](https://assetstore.unity.com/packages/tools/animation/leantween-3595)
